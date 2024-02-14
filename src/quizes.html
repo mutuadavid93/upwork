@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizes</title>
+    <style>
+        /* @import url('lumnis.css'); */
+
+        /* Additional CSS */
+        @import url('output.css');
+    </style>
+
+    <style>
+        .tongue-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .tongue {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #F2EDE6;
+            position: absolute;
+        }
+
+        .header-v2:after {
+            content: "";
+            z-index: 99;
+            position: absolute;
+            left: 10rem;
+            top: 4rem;
+            border: 0.5rem solid rgba(0, 0, 0, 0);
+            border-top: 0.5rem solid var(--white);
+        }
+
+        @media (min-width: 768px) {
+            .header-v2:after {
+                left: 19rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="hidden lg:block fixed top-52 left-11 h-[400px] w-52 overflow-auto z-20 bg-white border rounded-xl">
+        <div class="flex flex-col space-y-2">
+            <a href="#" class="p-3 pt-4 border-t border-t-[#c9c3ba] border-l-4 border-l-[#3F52FF]">Math</a>
+            <a href="#" class="p-3 border-t border-t-[#c9c3ba] hover:font-bold">French</a>
+            <a href="#" class="p-3 border-t border-t-[#c9c3ba] hover:font-bold">English</a>
+            <a href="#" class="p-3 border-t border-t-[#c9c3ba] hover:font-bold">Question the world</a>
+            <a href="#" class="p-3 border-t border-t-[#c9c3ba] hover:font-bold">EMC</a>
+            <a href="#" class="p-3 border-t border-t-[#c9c3ba] hover:font-bold">Activities</a>
+            <a href="#" class="p-3 text-sm border-t border-t-[#c9c3ba] hover:font-bold">Artistic teachings</a>
+            <a href="#" class="p-3 border-t border-t-[#c9c3ba] hover:font-bold">Media education</a>
+            <a href="#" class="p-3 text-sm border-t border-t-[#c9c3ba] hover:font-bold">Discovery of professions</a>
+            <a href="#" class="p-3 text-sm border-t border-t-[#c9c3ba] hover:font-bold">Take care of yourself and
+                others</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="text-gray-600 body-font bg-black header-v2">
+        <div class="container mx-auto flex flex-wrap p-5 px-0 flex-col md:flex-row items-center">
+            <div class="flex title-font space-x-6 md:space-x-8 font-medium items-center text-white mb-4 md:mb-0">
+                <div class="text-white md:hidden block mr-2 md:mr-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+                    </svg>
+                </div>
+                <img src="https://www.lumni.fr/images/logos/logo.svg" class="md:pr-10">
+
+                <div class="flex items-center space-x-4 text-sm tongue-nav">
+                    <button type="button" class="font-light md:border-l border-white md:pl-10">I AM: &nbsp;</button>
+                    <button type="button">PUPIL</button>
+                    <button type="button" class="text-sm font-light border-l border-white pl-10">TEACHER</button>
+                    <span class="tongue left-12 md:left-24 mt-24 md:mt-16"></span>
+                </div>
+            </div>
+            <nav
+                class="hidden md:ml-auto md:flex md:flex-wrap md:items-center md:gap-2 text-sm tracking-widest text-white justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z" />
+                </svg>
+                TO SUBSCRIBE TO THE NEWSLETTER, CLICK HERE
+            </nav>
+        </div>
+    </header>
+
+    <header class="text-black body-font bg-[#F2EDE6] border-b-2 border-b-gray-300">
+        <div class="container mx-auto flex flex-wrap p-5 px-0 flex-col md:flex-row items-center">
+            <div class="flex space-x-4 title-font items-center text-gray-900 mb-4 md:mb-0">
+                <a href="#" class="hover:font-bold">Welcome</a>
+                <div class="rounded-full p-[5px] bg-black"></div>
+                <a href="#" class="border-b-2 border-black font-bold hover:font-bold">Primary</a>
+                <div class="rounded-full p-[5px] bg-black"></div>
+                <a href="#" class="hover:font-bold">College</a>
+                <div class="rounded-full p-[5px] bg-black"></div>
+                <a href="#" class="hover:font-bold">High school</a>
+            </div>
+
+            <div class="md:ml-auto flex md:flex-wrap md:items-center text-sm space-x-8 justify-center">
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex md:items-center space-x-4">
+                        <div class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5l-1.5 1.5l-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16A6.5 6.5 0 0 1 3 9.5A6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14S14 12 14 9.5S12 5 9.5 5" />
+                            </svg>
+                        </div>
+                        <a href="#">To research</a>
+                    </div>
+                    <div class="hidden md:block rounded-full p-[5px] bg-black"></div>
+                    <button
+                        class="flex items-center rounded-full p-2 px-3 shadow-md shadow-black gap-2 border border-b-2 border-black font-bold">
+                        <img src="https://www.lumni.fr/images/emojis/lumniz.png" class="max-w-6">
+                        0 Lumniz
+                    </button>
+                </div>
+
+                <button
+                    class="flex items-center rounded-full bg-[#3F52FF] p-2 px-8 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#6975e3]">
+                    <div class="relative max-w-6">
+                        <img src="https://www.lumni.fr/images/icons/gamification/lumniz.svg" class="max-w-6" />
+                        <p class="absolute inset-0 top-1 text-black">0</p>
+                    </div>
+                    My account
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-[#E6DCCF] border-t border-t-[#E6DCCF]">
+        <!-- Simulate border -->
+        <div
+            class="after:content-[''] after:w-7 after:absolute after:top-0 after:left-0 after:bg-[#3F52FF] after:h-[100%] ">
+        </div>
+
+        <!-- start bread-crubs -->
+        <div class="w-full border-l-8 border-green-300 ps-9">
+            <div class="flex items-center space-x-2 my-4 text-sm">
+                <a href="#" class="hover:underline">Primaire</a>
+                <a href="#" class="hover:underline border-x border-x-black px-2">CP</a>
+                <a href="#" class="hover:underline font-bold">Maths</a>
+            </div>
+        </div>
+        <!-- end bread-crubs -->
+
+        <div class="flex">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-12 pr-4 md:pr-4 border-b border-b-[#E6DCCF]">
+                <div class="flex space-x-4">
+                    <div class="w-full">
+                        <div class="rounded-xl bg-white border border-b-[#E6DCCF] p-8 shadow-container">
+                            <div class="flex items-center space-x-4 justify-between">
+                                <div class="flex items-center text-xs font-semibold space-x-4">
+                                    <img src="https://www.lumni.fr/images/icons/histoire.svg" class="max-w-8">
+                                    THE HISTORY OF HALLOWEEN
+                                </div>
+                                <strong>1/10</strong>
+                            </div>
+                            <div class="w-full my-2 bg-[#D2C9C9] rounded-full h-1.5 mb-4">
+                                <div class="bg-[#FE898D] h-1.5 rounded-full" style="width: 10%"></div>
+                            </div>
+
+                            <!-- inner div -->
+                            <div
+                                class="grid place-items-center relative text-center  mt-2 px-16 pb-16 bg-[#F8F8F8] rounded">
+
+                                <div class="space-y-6 w-full">
+                                    <p class="text-lg">When is Halloween?</p>
+                                    <div
+                                        class="w-full cursor-pointer p-4 rounded-xl shadow-quiz border-2 border[#71e8ab] text-base">
+                                        <div class="flex space-x-4 w-full">
+                                            <div class="text-[#71e8ab] -mt-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="currentColor"
+                                                        d="m10 14.312l6.246-6.266q.139-.14.353-.14t.355.139q.14.139.14.354q0 .214-.14.355l-6.389 6.37q-.242.241-.565.241q-.323 0-.565-.242l-2.389-2.37q-.14-.138-.14-.352t.139-.355q.139-.14.354-.14q.214 0 .355.14z" />
+                                                </svg>
+                                            </div>
+                                            October 31
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="w-full cursor-pointer p-4 rounded-xl shadow-quiz border-2 border[#71e8ab] text-base">
+                                        <div class="flex space-x-4 w-full">
+                                            <div class="text-[#71e8ab] -mt-2 hidden">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="currentColor"
+                                                        d="m10 14.312l6.246-6.266q.139-.14.353-.14t.355.139q.14.139.14.354q0 .214-.14.355l-6.389 6.37q-.242.241-.565.241q-.323 0-.565-.242l-2.389-2.37q-.14-.138-.14-.352t.139-.355q.139-.14.354-.14q.214 0 .355.14z" />
+                                                </svg>
+                                            </div>
+                                            October 30
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="w-full cursor-pointer p-4 rounded-xl shadow-quiz border-2 border[#71e8ab] text-base">
+                                        <div class="flex space-x-4 w-full">
+                                            <div class="text-[#71e8ab] -mt-2 hidden">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="currentColor"
+                                                        d="m10 14.312l6.246-6.266q.139-.14.353-.14t.355.139q.14.139.14.354q0 .214-.14.355l-6.389 6.37q-.242.241-.565.241q-.323 0-.565-.242l-2.389-2.37q-.14-.138-.14-.352t.139-.355q.139-.14.354-.14q.214 0 .355.14z" />
+                                                </svg>
+                                            </div>
+                                            November 01
+                                        </div>
+                                    </div>
+
+                                    <!-- Result -->
+                                    <div
+                                        class="hidden w-full p-4 rounded-xl space-y-1 shadow-quiz border-2 border[#71e8ab] text-bas">
+                                        <div class="flex items-center gap-3 font-semibold">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="M20.385 9q.627 0 1.12.494q.495.494.495 1.121v1.231q0 .137-.028.298q-.028.162-.084.298l-2.73 6.473q-.206.462-.693.773q-.486.312-1.003.312H9.269q-.67 0-1.143-.472q-.472-.472-.472-1.143V9.67q0-.323.134-.628q.133-.305.35-.522l5.156-5.111q.221-.216.494-.272q.272-.055.516.06q.244.115.35.373t.04.579L13.665 9zM4.615 20q-.67 0-1.143-.472Q3 19.056 3 18.385v-7.77q0-.67.472-1.143Q3.944 9 4.615 9h.423q.672 0 1.144.472q.472.472.472 1.143v7.789q0 .671-.472 1.133Q5.71 20 5.038 20z" />
+                                            </svg>
+                                            Right answer !
+                                        </div>
+                                        <p class="text-left">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Delectus harum quos
+                                            dicta voluptatem reprehenderit ipsam inventore natus perspiciatis maiores.
+                                        </p>
+
+                                        <button
+                                            class="font-semibold py-2 px-6 bg-[#3F52FF] rounded-[3.5rem] text-white">Following</button>
+                                    </div>
+                                </div>
+
+                                <!-- Full-screen -->
+                                <img src="https://www.lumni.fr/images/icons/fullscreen-quiz.svg"
+                                    class="absolute z-10 bottom-8 right-8">
+                            </div>
+                        </div>
+
+
+                        <!-- Quiz Subject's Related Section -->
+                        <div class="flex items-center justify-center my-4 ">
+                            <!-- Share story -->
+                            <div class="max-w-md my-4 flex items-center justify-between space-x-16">
+                                <div class="flex items-center gap-2 text-base hover:font-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M11.98 19.094q-.292 0-.577-.106t-.503-.323L9.752 17.63q-2.67-2.425-4.71-4.717Q3 10.622 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.094 0 2.279.553q1.184.553 2.221 2.085q1.037-1.532 2.221-2.085q1.185-.553 2.279-.553q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 2.529-2.125 4.862q-2.125 2.332-4.652 4.623l-1.142 1.03q-.218.218-.513.323t-.587.106m-.47-11.767q-.898-1.448-1.867-2.063Q8.675 4.65 7.5 4.65q-1.5 0-2.5 1t-1 2.5q0 1.108.627 2.272q.627 1.165 1.684 2.386q1.056 1.22 2.428 2.498q1.373 1.277 2.857 2.629q.173.153.404.153t.404-.153q1.484-1.352 2.857-2.63q1.372-1.276 2.428-2.497q1.057-1.221 1.684-2.386Q20 9.258 20 8.15q0-1.5-1-2.5t-2.5-1q-1.175 0-2.144.614q-.97.615-1.868 2.063q-.078.135-.213.202T12 7.596t-.275-.067q-.135-.067-.213-.202M12 11.398" />
+                                    </svg>
+                                    Favorites
+                                </div>
+                                <div class="flex items-center gap-2 text-base hover:font-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M12 20a8 8 0 0 0 8-8a8 8 0 0 0-8-8a8 8 0 0 0-8 8a8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10a10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67l-.75 1.23L11 13V7z" />
+                                    </svg>
+                                    See later
+                                </div>
+                                <div class="flex items-center gap-2 text-base hover:font-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M18.002 21.5q-1.04 0-1.771-.73q-.731-.728-.731-1.77q0-.2.035-.413q.034-.214.103-.402l-7.742-4.562q-.367.414-.854.645Q6.556 14.5 6 14.5q-1.042 0-1.77-.728q-.73-.729-.73-1.77q0-1.04.73-1.771Q4.957 9.5 6 9.5q.556 0 1.042.232q.487.231.854.645l7.742-4.562q-.069-.188-.103-.402Q15.5 5.2 15.5 5q0-1.042.729-1.77q.728-.73 1.769-.73q1.04 0 1.771.729q.731.728.731 1.769q0 1.04-.73 1.771q-.728.731-1.77.731q-.556 0-1.042-.232q-.487-.231-.854-.645l-7.742 4.562q.069.188.103.4q.035.213.035.411q0 .198-.035.415q-.034.216-.103.404l7.742 4.562q.367-.414.854-.645q.486-.232 1.042-.232q1.042 0 1.77.729q.73.728.73 1.769q0 1.04-.728 1.771q-.729.731-1.77.731M18 6.5q.617 0 1.059-.441Q19.5 5.617 19.5 5t-.441-1.059Q18.617 3.5 18 3.5t-1.059.441Q16.5 4.383 16.5 5t.441 1.059Q17.383 6.5 18 6.5m-12 7q.617 0 1.059-.441Q7.5 12.617 7.5 12t-.441-1.059Q6.617 10.5 6 10.5t-1.059.441Q4.5 11.383 4.5 12t.441 1.059Q5.383 13.5 6 13.5m12 7q.617 0 1.059-.441q.441-.442.441-1.059t-.441-1.059Q18.617 17.5 18 17.5t-1.059.441Q16.5 18.383 16.5 19t.441 1.059q.442.441 1.059.441m0-1.5" />
+                                    </svg>
+                                    Share
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- winnings -->
+                        <div class="flex items-center space-x-3 p-4 rounded-xl bg-white shadow-container">
+                            <img src="https://www.lumni.fr/images/emojis/notif.png" class="max-w-[3rem]">
+
+                            <div>
+                                <div class="flex items-center gap-2 text-sm font-semibold">
+                                    Play this quiz and easily win up to
+                                    <div class="flex items-center gap-1">
+                                        <img src="https://www.lumni.fr/images/emojis/lumniz.png" class="max-w-6">
+                                        80 Lumniz by logging in!
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M17.073 12.5H5.5q-.213 0-.357-.143Q5 12.213 5 12t.143-.357q.144-.143.357-.143h11.573l-3.735-3.735q-.146-.146-.152-.344q-.007-.198.152-.363q.166-.166.357-.169q.192-.002.357.163l4.383 4.383q.13.13.183.267q.053.136.053.298t-.053.298q-.053.137-.183.267l-4.383 4.383q-.146.146-.347.153q-.201.007-.367-.159q-.16-.165-.162-.354q-.003-.188.162-.353z" />
+                                    </svg>
+                                    <a href="#" class="underline font-light text-sm">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between max-w-60 text-[14px] mt-8">
+                                History Quiz
+                                <div class="rounded-full p-[5px] bg-black"></div>
+                                10 questions
+                            </div>
+
+                            <h3 class="font-semibold text-lg text-text-title my-4">The History of Halloween</h3>
+
+                            <p>
+                                Pranks, disguises, candy, witches, lanterns... every Halloween, we like to have fun
+                                scaring ourselves. But where does this celebration come from? Do you know its origins
+                                and...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-2/4 space-y-4">
+                        <div class="rotate-4 p-4 mb-8 bg-white text-2xl font-bold max-w-72 text-center">
+                            On the same topic
+                        </div>
+
+                        <div class="rounded-xl p-3 shadow-lg bg-white relative cursor-pointer transform transition-transform duration-500 ease-in-out hover:scale-105">
+                            <span class="absolute top-0 left-0 p-1 px-3 z-10 text-xs bg-white font-semibold"
+                                style="border-radius: 0.75rem 0 0.75rem 0;">Article</span>
+
+                            <div class="flex items-stretch rounded-xl">
+                                <img src="https://medias.lumni.fr/8WODprk8gDD9vBaOBnJlThJSVSE/160x94/filters:focal(260x370:259x369):quality(80):max_bytes(120000)/5dae31a3b988f83e3a2c0a47"
+                                    class="rounded-l-xl">
+
+                                <div class="flex flex-col justify-between w-full bg-[#F9E2C5] p-2 rounded-r-xl text-xs">
+                                    <div class="flex items-start">
+                                        <p class="font-semibold w-full">
+                                            <span class="block">
+                                                Halloween :
+                                            </span>
+                                            story with the...
+                                        </p>
+                                        <button
+                                            class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <p>Primary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-xl p-3 shadow-lg bg-white relative cursor-pointer transform transition-transform duration-500 ease-in-out hover:scale-105">
+                            <span class="absolute top-0 left-0 p-1 px-3 z-10 text-xs bg-white font-semibold"
+                                style="border-radius: 0.75rem 0 0.75rem 0;">Article</span>
+
+                            <div class="flex items-stretch rounded-xl">
+                                <img src="https://medias.lumni.fr/X94aNcmrgL6DtKV7iX9U3xhZZaQ/160x94/filters:focal(640x38:639x37):quality(80):max_bytes(120000)/5dc2edc48bc97b639201e6f1"
+                                    class="rounded-l-xl">
+
+                                <div class="flex flex-col justify-between w-full bg-[#F9E2C5] p-2 rounded-r-xl text-xs">
+                                    <div class="flex items-start">
+                                        <p class="font-semibold w-full">
+                                            <span class="block">
+                                                Halloween :
+                                            </span>
+                                            story with the...
+                                        </p>
+                                        <button
+                                            class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <p>Primary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-xl p-3 shadow-lg bg-white relative cursor-pointer transform transition-transform duration-500 ease-in-out hover:scale-105">
+                            <span class="absolute top-0 left-0 p-1 px-3 z-10 text-xs bg-white font-semibold"
+                                style="border-radius: 0.75rem 0 0.75rem 0;">Video</span>
+
+                            <div class="flex items-stretch rounded-xl">
+                                <img src="https://medias.lumni.fr/XhDuHDTcVflICD_QezSyw3ym5QY/160x94/filters:focal(600x57:599x56):quality(80):max_bytes(120000)/6478860ff8332806900a1dd5"
+                                    class="rounded-l-xl">
+
+                                <div class="flex flex-col justify-between w-full bg-[#F9E2C5] p-2 rounded-r-xl text-xs">
+                                    <div class="flex items-start">
+                                        <p class="font-semibold w-full">
+                                            <span class="block">
+                                                Halloween :
+                                            </span>
+                                            story with the...
+                                        </p>
+                                        <button
+                                            class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <p>Primary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-xl p-3 shadow-lg bg-white relative cursor-pointer transform transition-transform duration-500 ease-in-out hover:scale-105">
+                            <span class="absolute top-0 left-0 p-1 px-3 z-10 text-xs bg-white font-semibold"
+                                style="border-radius: 0.75rem 0 0.75rem 0;">Restricted</span>
+
+                            <div class="flex items-stretch rounded-xl">
+                                <img src="https://medias.lumni.fr/X94aNcmrgL6DtKV7iX9U3xhZZaQ/160x94/filters:focal(640x38:639x37):quality(80):max_bytes(120000)/5dc2edc48bc97b639201e6f1"
+                                    class="rounded-l-xl grayscale">
+
+                                <div class="flex flex-col justify-between w-full bg-[#F9E2C5] p-2 rounded-r-xl text-xs">
+                                    <div class="flex items-start">
+                                        <p class="font-semibold w-full">
+                                            <span class="block">
+                                                Halloween :
+                                            </span>
+                                            story with the...
+                                        </p>
+                                        <button
+                                            class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <p>Primary</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-center justify-between p-2 py-4 pl-6 bg-white rounded-2xl border border-b-2 border-black shadow-md shadow-[#393939] cursor-pointer hover:bg-[#EFEFEF]">
+                            <div class="text-sm leading-6">
+                                <p class="uppercase font-light">see the whole section</p>
+                                <p class="font-bold text-lg">English</p>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="m13.292 12l-4.6-4.6l.708-.708L14.708 12L9.4 17.308l-.708-.708z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-[#F2EDE6] pb-12">
+        <div
+            class="after:content-[''] after:w-7 after:absolute after:top-0 after:left-0 after:bg-[#2FC97F] after:h-[100%] ">
+        </div>
+
+        <!--  -->
+        <div class="flex">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-12 pr-4 md:pr-8">
+                <div class="-rotate-6 p-4 my-7 mb-12 mt-16 bg-white text-2xl font-bold max-w-80 text-center">
+                    Deepen your knowledge
+                </div>
+
+                <!-- slider cards -->
+                <div class="grid gap-4 md:grid-cols-3 md:gap-10">
+                    <div
+                        class="flex flex-col items-center justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110">
+                        <div class="w-full">
+                            <img src="https://medias.lumni.fr/bRD-7KFn3jHLxHVe5Nocegj2M2Y/276x189/filters:focal(600x57:599x56):quality(80):max_bytes(120000)/61a75f25a3dae309c1685334"
+                                class="w-full grayscale rounded-t-[3.5rem] object-cover" />
+
+                            <div class="bg-[#F4D35E] pb-24 rounded-b-[3.5rem] relative">
+                                <div class="absolute text-xs bottom-10 left-4">5 min</div>
+                                <div class="flex items-center justify-between p-3 text-text-title">
+                                    <div class="text-md font-semibold leading-5">
+                                        <span class="block">Mental arithmetic:</span>
+                                        <span class="block">play with the</span>
+                                        operations vacuum...
+                                    </div>
+                                    <button
+                                        class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute -top-2.5 left-5 p-2 px-3 z-1 text-xs bg-white font-semibold"
+                            style="border-radius: 0.75rem 0 0.75rem 0;">Game</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110">
+                        <div class="w-full">
+                            <img src="https://medias.lumni.fr/Ew_WZMAO0pBIwXLPxnNIYZVp_B0/276x189/filters:focal(618x59:617x58):quality(80):max_bytes(120000)/5f15988d3ed7580bc031fda9"
+                                class="w-full rounded-t-[3.5rem] object-cover" />
+
+                            <div class="bg-[#F4D35E] pb-24 rounded-b-[3.5rem] relative">
+                                <div class="absolute text-xs bottom-10 left-4">30 min</div>
+                                <div class="flex items-center justify-between p-3 text-text-title">
+                                    <div class="text-md font-semibold leading-5">
+                                        <span class="block">Mental arithmetic:</span>
+                                        <span class="block">play with the</span>
+                                        operations vacuum...
+                                    </div>
+                                    <button
+                                        class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute -top-2.5 left-5 p-2 px-3 z-1 text-xs bg-white font-semibold"
+                            style="border-radius: 0.75rem 0 0.75rem 0;">Game</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110">
+                        <div class="w-full">
+                            <img src="https://medias.lumni.fr/6Uoj1whReN_MTUwse9YGGSGs2xs/276x189/filters:focal(600x57:599x56):quality(80):max_bytes(120000)/64a417c3ea8089d13201107d"
+                                class="w-full rounded-t-[3.5rem] object-cover" />
+
+                            <div class="bg-[#F4D35E] pb-24 rounded-b-[3.5rem] relative">
+                                <div class="absolute text-xs bottom-10 left-4">31 min</div>
+                                <div class="flex items-center justify-between p-3 text-text-title">
+                                    <div class="text-md font-semibold leading-5">
+                                        <span class="block">Mental arithmetic:</span>
+                                        <span class="block">play with the</span>
+                                        operations vacuum...
+                                    </div>
+                                    <button
+                                        class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute -top-2.5 left-5 p-2 px-3 z-1 text-xs bg-white font-semibold"
+                            style="border-radius: 0.75rem 0 0.75rem 0;">Game</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="flex">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-12 pr-4 md:pr-8 border-b border-b-[#E6DCCF]">
+                <div class="-rotate-2 p-4 my-7 mt-4 bg-white text-2xl font-bold max-w-[21rem] text-center">
+                    This might interest you...
+                </div>
+
+                <div class="grid gap-4 md:grid-cols-3 md:gap-10">
+                    <div
+                        class="flex flex-col items-center justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110">
+                        <div class="w-full">
+                            <img src="https://medias.lumni.fr/09Ul5LgqWbyGAFMv-79g5TcPnn0/276x189/filters:focal(296460x-92130:296459x0):quality(80):max_bytes(120000)/64522c1465bc0ec7c10f3c87"
+                                class="w-full rounded-t-[3.5rem] object-cover grayscale" />
+
+                            <div class="bg-[#F4D35E] pb-24 rounded-b-[3.5rem] relative">
+                                <div class="absolute text-xs bottom-10 left-4">Primary</div>
+                                <div class="flex items-center justify-between p-3 text-text-title">
+                                    <div class="text-md font-semibold leading-5">
+                                        <span class="block">Mental arithmetic:</span>
+                                        <span class="block">play with the</span>
+                                        operations vacuum...
+                                    </div>
+                                    <button
+                                        class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute -top-2.5 left-5 p-2 px-3 z-1 text-xs bg-white font-semibold"
+                            style="border-radius: 0.75rem 0 0.75rem 0;">Restricted</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110">
+                        <div class="w-full">
+                            <img src="https://medias.lumni.fr/1Ema9_TGRyJ7LsvA0mPQ9hsI2uU/276x189/filters:focal(529x578:528x577):quality(80):max_bytes(120000)/5dc2efa42055bf150f7831bc"
+                                class="w-full rounded-t-[3.5rem] object-cover" />
+
+                            <div class="bg-[#F4D35E] pb-24 rounded-b-[3.5rem] relative">
+                                <div class="absolute text-xs bottom-10 left-4">Primary</div>
+                                <div class="flex items-center justify-between p-3 text-text-title">
+                                    <div class="text-md font-semibold leading-5">
+                                        <span class="block">Mental arithmetic:</span>
+                                        <span class="block">play with the</span>
+                                        operations vacuum...
+                                    </div>
+                                    <button
+                                        class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute -top-2.5 left-5 p-2 px-3 z-1 text-xs bg-white font-semibold"
+                            style="border-radius: 0.75rem 0 0.75rem 0;">Game</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110">
+                        <div class="w-full">
+                            <img src="https://medias.lumni.fr/Ta6x_8KpvEI74bniRopj6nx3ehs/276x189/filters:focal(518x535:517x534):quality(80):max_bytes(120000)/5dc2efab2055bf150f783391"
+                                class="w-full rounded-t-[3.5rem] object-cover" />
+
+                            <div class="bg-[#F4D35E] pb-24 rounded-b-[3.5rem] relative">
+                                <div class="absolute text-xs bottom-10 left-4">Primary</div>
+                                <div class="flex items-center justify-between p-3 text-text-title">
+                                    <div class="text-md font-semibold leading-5">
+                                        <span class="block">Mental arithmetic:</span>
+                                        <span class="block">play with the</span>
+                                        operations vacuum...
+                                    </div>
+                                    <button
+                                        class="flex flex-col justify-center items-center rounded-full border border-black shadow-custom p-1 bg-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="absolute -top-2.5 left-5 p-2 px-3 z-1 text-xs bg-white font-semibold"
+                            style="border-radius: 0.75rem 0 0.75rem 0;">Game</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-[#E6DCCF] border-t border-t-[#E6DCCF]">
+        <!-- Simulate border -->
+        <div
+            class="after:content-[''] after:w-7 after:absolute after:top-0 after:left-0 after:bg-[#3F52FF] after:h-[100%] ">
+        </div>
+
+        <div class="flex mt-4 md:mt-8">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-8 pr-4 md:pr-8 border-b border-b-[#E6DCCF] space-y-4">
+                <img src="https://www.lumni.fr/images/logos/logo-b.svg" alt="">
+                <p>
+                    The CP, or preparatory course, is the first class of elementary school whose priority objectives are
+                    to allow students to learn to read, write and count. From CP, students also discover the learning of
+                    a modern language (foreign or regional), lessons to question the world, artistic lessons (plastic
+                    arts and musical education), physical and sports education and moral and civic.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-gray-600 body-font bg-[#3F52FF]">
+        <div
+            class="container px-5 py-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-6">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <h2 class="title-font font-bold tracking-widest text-sm mb-3 text-white">Our partners</h2>
+                </a>
+                <div class="flex md:justify-start justify-center">
+                    <img src="https://www.lumni.fr/images/logos/nation.svg" alt="">
+                </div>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first text-white">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4"></div>
+                <!-- <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                        </li>
+                    </nav>
+                </div> -->
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4 ">
+                    <h2 class="title-font font-bold tracking-widest text-sm mb-3 ">Programs</h2>
+                    <nav class="list-none mb-10 text-sm space-y-2">
+                        <li><a href="#">1 day, 1 question</a></li>
+                        <li><a href="#">Tell me about barrier gestures</a></li>
+                        <li><a href="#">Scooby-Doo in Europe</a></li>
+                        <li><a href="#">1 minute at the museum</a></li>
+                        <li><a href="#">Celestin</a></li>
+                        <li><a href="#">Professor Gamberge</a></li>
+                        <li><a href="#">Ralph and the Dinosaurs</a></li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium tracking-widest text-sm mb-3">Categories</h2>
+                    <nav class="list-none mb-10 text-sm space-y-2">
+                        <li><a href="#">The fundamentals</a></li>
+                        <li><a href="#">Grammar</a></li>
+                        <li><a href="#">Reading</a></li>
+                        <li><a href="#">Calculation</a></li>
+                        <li><a href="#">The planet</a></li>
+                        <li><a href="#">Animals</a></li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium tracking-widest text-sm mb-3">Our contents</h2>
+                    <nav class="list-none mb-10 text-sm space-y-2">
+                        <li><a href="#">1 day, 1 question</a></li>
+                        <li><a href="#">Tell me about barrier gestures</a></li>
+                        <li><a href="#">Scooby-Doo in Europe</a></li>
+                        <li><a href="#">1 minute at the museum</a></li>
+                        <li><a href="#">Celestin</a></li>
+                        <li><a href="#">Professor Gamberge</a></li>
+                        <li><a href="#">Ralph and the Dinosaurs</a></li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black">
+            <div
+                class="container mx-auto py-4 px-5 flex text-xs font-light text-white space-x-4 flex-wrap justify-center text-center sm:flex-row">
+                <a href="#">CGU</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Manage my trackers</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Who are we ?</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Privacy Policy</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Legal Notice</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const tongue = document.querySelector('.tongue');
+        const navLinks = document.querySelectorAll('.tongue-nav button')
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                // Prevent the default action of the link
+                e.preventDefault();
+
+                // Move the tongue to the clicked link
+                tongue.style.left = link.offsetLeft + 'px';
+            });
+        });
+    </script>
+</body>
+
+</html>
