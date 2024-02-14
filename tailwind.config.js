@@ -9,7 +9,8 @@ module.exports = {
         container: "-0.0625rem 0.25rem 0 rgba(0,0,0,.18)"
       },
       colors: {
-        "text-title": "#232323"
+        "text-title": "#232323",
+        "hover-gray": "#EFEFEF"
       }
     }
   },
