@@ -8,14 +8,27 @@
     <style>
         @import url('output.css');
     </style>
+
+    <style>
+        #hero-caption {
+            text-shadow: none;
+        }
+
+        @media (min-width: 768px) {
+            #hero-caption {
+            text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+        }
+        }
+    </style>
 </head>
 
 <body>
     <header class="mx-auto px-4">
-        <nav class="h-20 flex items-center justify-between">
+        <nav class="h-20 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div class="flex items-center gap-32">
                 <!-- Dropdown -->
-                <div class="hover:bg-black text-white rounded-lg flex items-center gap-2 p-2 pl-4 pr-2 cursor-pointer">
+                <div
+                    class="hover:bg-black bg-black md:bg-white text-white rounded-lg flex items-center gap-2 p-2 pl-4 pr-2 cursor-pointer">
                     <img class="max-w-w-[32px] max-h-[32px]"
                         src="https://static.parastorage.com/services/linguist-flags/1.663.0/assets/flags/round/HKG.png" />
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -29,7 +42,7 @@
                 </a>
             </div>
 
-            <div class="flex space-x-7 -mt-3">
+            <div class="flex space-x-3 md:space-x-7 -mt-3 text-xs md:text-lg">
                 <a href="#">關於我們</a>
                 <a href="#">為何選擇我們</a>
                 <a href="#">課程框架</a>
@@ -41,19 +54,21 @@
     </header>
 
     <!-- Hero banner -->
-    <section>
-        <div class="relative">
-            <div class="flex flex-col items-center text-center text-white space-y-4 absolute top-32 right-60 max-w-lg">
-                <div class="text-6xl" style="text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;">
+    <section class="mt-8 md:mt-0">
+        <div class="relative flex flex-col-reverse md:flex-col">
+            <div
+                class="flex flex-col  items-center text-center md:text-white space-y-4 py-12 md:py-0 md:absolute md:top-32 md:right-60 max-w-lg">
+                <div class="text-3xl lg:text-6xl" id="hero-caption">
                     <span class="font-bold tracking-widest block mb-2">外籍英語教師</span>
                     <span class="font-bold tracking-widest">1對1線上教學</span>
                 </div>
 
                 <div class="text-xl">適合年齡4-12歲</div>
 
-
                 <div class="flex flex-col rounded shadow p-4 py-4 bg-[#F4F4F4] space-y-4 border-2 border-gray-300">
-                    <input type="text" class="focus:ring-0 border focus:outline-none text-black rounded py-2 ps-3.5 bg-white placeholder:text-gray-700" placeholder="020XXX XXX"/>
+                    <input type="text"
+                        class="focus:ring-0 border focus:outline-none text-black rounded py-2 ps-3.5 bg-white placeholder:text-gray-700"
+                        placeholder="020XXX XXX" />
                     <button class="py-2 bg-orange-500 hover:bg-lime-400 rounded">PLAY</button>
                 </div>
 
@@ -78,7 +93,8 @@
     <!-- Clients -->
     <section class="clients text-center py-16 bg-[#F4F4F4]">
         <h3 class="text-3xl font-bold">​我們的伙伴</h3>
-        <div class="flex items-center justify-center space-x-16 mt-8">
+        <div
+            class="grid grid-cols-3 place-items-center gap-2    md:flex md:items-center md:justify-center md:space-x-16 mt-8">
             <img src="https://static.wixstatic.com/media/f00125_58558b2163c04a26870ed7d4b5263e35~mv2.png/v1/fill/w_117,h_48,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cyberport_Logo_Master-01.png"
                 alt="">
             <img src="https://static.wixstatic.com/media/f00125_098b53babad7495c9538698d29366e83~mv2.png/v1/crop/x_169,y_352,w_1224,h_507/fill/w_92,h_38,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/kpmg-logo.png"
@@ -100,8 +116,8 @@
 
 
         <div class="mt-10 mx-24">
-            <div class="max-3/4 flex items-center space-x-16">
-                <div class="flex flex-col gap-16">
+            <div class="md:max-3/4 flex flex-col md:flex-row space-y-8 md:items-center md:space-x-16">
+                <div class="flex flex-col gap-4 md:gap-16">
                     <header>
                         <div class="flex justify-center">
                             <img src="https://static.wixstatic.com/media/f00125_aa605c91abf440c58b276eec729173ba~mv2.png/v1/fill/w_126,h_112,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f00125_aa605c91abf440c58b276eec729173ba~mv2.png"
@@ -109,41 +125,15 @@
                         </div>
                         <p class="text-center mt-4 text-2xl text-[#FF7648] font-bold">國際課程框架</p>
                     </header>
-                    <article class="card-content">
-                        <p>教材按照英國劍橋國際英語課程框</p>
-                        <p>架編制，內容豐富有趣，更符合香</p>
-                        <p>港教育制度。</p>
-                    </article>
-                </div>
-                <div class="flex flex-col gap-16">
-                    <header>
-                        <div class="flex justify-center">
-                            <img src="https://static.wixstatic.com/media/f00125_92bc948fa92f4b66b5f8382aae67c01e~mv2.png/v1/fill/w_113,h_112,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f00125_92bc948fa92f4b66b5f8382aae67c01e~mv2.png"
-                                alt="">
+                    <article class="flex justify-center card-content text-sm md:text-md">
+                        <div>
+                            <p>教材按照英國劍橋國際英語課程框</p>
+                            <p>架編制，內容豐富有趣，更符合香</p>
+                            <p>港教育制度。</p>
                         </div>
-                        <p class="text-center mt-4 text-2xl text-[#FF7648] font-bold">國際課程框架</p>
-                    </header>
-                    <article class="card-content">
-                        <p>教材按照英國劍橋國際英語課程框</p>
-                        <p>架編制，內容豐富有趣，更符合香</p>
-                        <p>港教育制度。</p>
                     </article>
                 </div>
-                <div class="flex flex-col gap-16">
-                    <header>
-                        <div class="flex justify-center">
-                            <img src="https://static.wixstatic.com/media/f00125_58558b2163c04a26870ed7d4b5263e35~mv2.png/v1/fill/w_166,h_67,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cyberport_Logo_Master-01.png"
-                                alt="">
-                        </div>
-                        <p class="text-center mt-4 text-2xl text-[#FF7648] font-bold">國際課程框架</p>
-                    </header>
-                    <article class="card-content">
-                        <p>教材按照英國劍橋國際英語課程框</p>
-                        <p>架編制，內容豐富有趣，更符合香</p>
-                        <p>港教育制度。</p>
-                    </article>
-                </div>
-                <div class="flex flex-col gap-16">
+                <div class="flex flex-col gap-4 md:gap-16">
                     <header>
                         <div class="flex justify-center">
                             <img src="https://static.wixstatic.com/media/f00125_aa605c91abf440c58b276eec729173ba~mv2.png/v1/fill/w_126,h_112,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f00125_aa605c91abf440c58b276eec729173ba~mv2.png"
@@ -151,10 +141,44 @@
                         </div>
                         <p class="text-center mt-4 text-2xl text-[#FF7648] font-bold">國際課程框架</p>
                     </header>
-                    <article class="card-content">
-                        <p>教材按照英國劍橋國際英語課程框</p>
-                        <p>架編制，內容豐富有趣，更符合香</p>
-                        <p>港教育制度。</p>
+                    <article class="flex justify-center card-content text-sm md:text-md">
+                        <div>
+                            <p>教材按照英國劍橋國際英語課程框</p>
+                            <p>架編制，內容豐富有趣，更符合香</p>
+                            <p>港教育制度。</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="flex flex-col gap-4 md:gap-16">
+                    <header>
+                        <div class="flex justify-center">
+                            <img src="https://static.wixstatic.com/media/f00125_aa605c91abf440c58b276eec729173ba~mv2.png/v1/fill/w_126,h_112,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f00125_aa605c91abf440c58b276eec729173ba~mv2.png"
+                                alt="">
+                        </div>
+                        <p class="text-center mt-4 text-2xl text-[#FF7648] font-bold">國際課程框架</p>
+                    </header>
+                    <article class="flex justify-center card-content text-sm md:text-md">
+                        <div>
+                            <p>教材按照英國劍橋國際英語課程框</p>
+                            <p>架編制，內容豐富有趣，更符合香</p>
+                            <p>港教育制度。</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="flex flex-col gap-4 md:gap-16">
+                    <header>
+                        <div class="flex justify-center">
+                            <img src="https://static.wixstatic.com/media/f00125_aa605c91abf440c58b276eec729173ba~mv2.png/v1/fill/w_126,h_112,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f00125_aa605c91abf440c58b276eec729173ba~mv2.png"
+                                alt="">
+                        </div>
+                        <p class="text-center mt-4 text-2xl text-[#FF7648] font-bold">國際課程框架</p>
+                    </header>
+                    <article class="flex justify-center card-content text-sm md:text-md">
+                        <div>
+                            <p>教材按照英國劍橋國際英語課程框</p>
+                            <p>架編制，內容豐富有趣，更符合香</p>
+                            <p>港教育制度。</p>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -162,13 +186,13 @@
     </section>
 
 
-    <section class="py-14 px-24 bg-[#F4F4F4]">
+    <section class="py-14 md:px-24 bg-[#F4F4F4]">
         <h3 class="text-center text-3xl font-bold">國際性及​多元化課程</h3>
 
-        <div class="flex justify-center mt-14">
-            <div class="grid grid-cols-3 gap-2 w-11/12 place-items-center">
+        <div class="flex justify-center mt-14 px-6">
+            <div class="grid gap-6 w-full md:grid-cols-3 md:gap-2 md:w-11/12 md:place-items-center">
                 <div
-                    class="flex flex-col max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white shadow transform transition-transform duration-500 ease-in-out hover:scale-110">
+                    class="flex flex-col md:max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white shadow transform transition-transform duration-500 ease-in-out hover:scale-110">
                     <img class="max-w-16"
                         src="https://static.wixstatic.com/media/f00125_0801b3ec4ff64df4a848bd207709c465~mv2.png/v1/fill/w_58,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/051-united-kingdom.png"
                         alt="" />
@@ -184,7 +208,7 @@
                     </p>
                 </div>
                 <div
-                    class="flex flex-col max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white shadow transform transition-transform duration-500 ease-in-out hover:scale-110">
+                    class="flex flex-col md:max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white shadow transform transition-transform duration-500 ease-in-out hover:scale-110">
                     <img class="max-w-16"
                         src="https://static.wixstatic.com/media/f00125_d162252fab964118aa08fef056323941~mv2.png/v1/fill/w_58,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/abc.png"
                         alt="" />
@@ -200,7 +224,7 @@
                     </p>
                 </div>
                 <div
-                    class="flex flex-col max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white shadow transform transition-transform duration-500 ease-in-out hover:scale-110">
+                    class="flex flex-col md:max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white shadow transform transition-transform duration-500 ease-in-out hover:scale-110">
                     <img class="max-w-16"
                         src="https://static.wixstatic.com/media/f00125_364a7e4361f74115a10a46490561224d~mv2.png/v1/fill/w_58,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/speak.png"
                         alt="" />
@@ -232,7 +256,7 @@
         <div class="flex justify-center">
             <h3 class="text-center text-4xl font-bold">受家長學生老師歡迎的教學模式</h3>
             <img src="https://static.wixstatic.com/media/c22c23_a0493ec790784b269e3ac17dddacfc9c~mv2.png/v1/fill/w_162,h_66,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/small%20pencil.png"
-                class="-ml-28 -rotate-12 mt-1" />
+                class="-ml-28 -rotate-12 mt-1 md:block hidden" />
         </div>
 
         <div class="flex justify-center">
@@ -243,19 +267,19 @@
         </div>
 
         <div class="flex flex-col items-center mt-8">
-            <div class="flex items-center space-x-8">
+            <div class="flex flex-col space-y-6 md:flex-row md:items-center md:space-x-8">
                 <div class="flex flex-col space-y-8">
-                    <div class="text-4xl">
+                    <div class="text-2xl md:text-4xl">
                         <span class="text-[#FF7648] mr-2 font-bold">>25,000 </span>
-                        <span class="text-2xl">堂英語課堂</span>
+                        <span class="text-xl md:text-2xl">堂英語課堂</span>
                     </div>
-                    <div class="text-4xl">
+                    <div class="text-2xl md:text-4xl">
                         <span class="text-[#FF7648] mr-2 font-bold">>3,000 </span>
-                        <span class="text-2xl">名註冊學生</span>
+                        <span class="text-xl md:text-2xl">名註冊學生</span>
                     </div>
-                    <div class="text-4xl">
+                    <div class="text-2xl md:text-4xl">
                         <span class="text-[#FF7648] mr-2 font-bold">>100 </span>
-                        <span class="text-2xl">名外籍教師</span>
+                        <span class="text-xl md:text-2xl">名外籍教師</span>
                     </div>
                 </div>
                 <img src="https://static.wixstatic.com/media/f00125_ab8932c43ba44156bb291b8d477a9764~mv2.png/v1/fill/w_378,h_289,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/iPad%20Pro_In-Class%20v2.png"
@@ -265,16 +289,16 @@
     </section>
 
 
-    <div class="py-14 bg-[#F4F4F4] px-24">
+    <div class="py-14 bg-[#F4F4F4] md:px-24">
         <h3 class="text-center text-4xl font-bold">學生家長分享</h3>
 
         <section class="relative">
             <!-- <img src="https://static.wixstatic.com/media/c22c23_c5be72e45f2d4ecb93f30b43d67c3513~mv2.png/v1/crop/x_38,y_2,w_286,h_452/fill/w_120,h_191,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/laef2.png"
                 class="absolute rotate-180"> -->
 
-            <div class="grid grid-cols-3 gap-2 w-11/12 place-items-center mt-12">
+            <div class="grid gap-4 md:grid-cols-3 md:gap-2 px-6 md:w-11/12 place-items-center mt-12">
                 <div
-                    class="flex flex-col max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white transform transition-transform duration-500 ease-in-out hover:scale-110 border-4 border-[#FF7648] bg-transparent">
+                    class="flex flex-col md:max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white transform transition-transform duration-500 ease-in-out hover:scale-110 border-4 border-[#FF7648] bg-transparent">
 
                     <p class="font-bold text-center text-2xl text-[#FF7648]">
                         Mrs. Tang
@@ -292,7 +316,7 @@
                 </div>
 
                 <div
-                    class="flex flex-col max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white transform transition-transform duration-500 ease-in-out hover:scale-110 border-4 border-[#FF7648] bg-transparent">
+                    class="flex flex-col md:max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white transform transition-transform duration-500 ease-in-out hover:scale-110 border-4 border-[#FF7648] bg-transparent">
 
                     <p class="font-bold text-center text-2xl text-[#FF7648]">
                         Mrs. Cheung
@@ -310,7 +334,7 @@
                 </div>
 
                 <div
-                    class="flex flex-col max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white transform transition-transform duration-500 ease-in-out hover:scale-110 border-4 border-[#FF7648] bg-transparent">
+                    class="flex flex-col md:max-w-xs space-y-8 px-4 py-8 rounded-2xl bg-white transform transition-transform duration-500 ease-in-out hover:scale-110 border-4 border-[#FF7648] bg-transparent">
 
                     <p class="font-bold text-center text-2xl text-[#FF7648]">
                         12歲​女兒的媽媽
@@ -331,10 +355,11 @@
     </div>
 
 
-    <section class="py-14 pb-10 px-16 bg-white">
-        <h3 class="text-center text-4xl font-bold">Starkid 學生來自不同學校</h3>
+    <section class="py-14 pb-10 md:px-16 bg-white">
+        <h3 class="text-center text-2xl md:text-4xl px-8 font-bold">Starkid 學生來自不同學校</h3>
 
-        <div class="my-4 mt-16 pb-2 flex space-x-10 items-center justify-center">
+        <div
+            class="grid grid-cols-3 place-items-center gap-2 my-4 mt-12 md:mt-16 pb-2 md:flex md:space-x-10 md:items-center md:justify-center">
             <img src="https://static.wixstatic.com/media/f00125_73ff46a677e948298c64a867828ecfa2~mv2.png/v1/crop/x_15,y_40,w_275,h_267/fill/w_84,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f00125_73ff46a677e948298c64a867828ecfa2~mv2.png"
                 alt="">
             <img src="https://static.wixstatic.com/media/f00125_f8748240e4fd4d0eb363faad7635957d~mv2.png/v1/fill/w_67,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f00125_f8748240e4fd4d0eb363faad7635957d~mv2.png"
@@ -353,13 +378,13 @@
     </section>
 
     <section>
-        <div class="grid grid-cols-2">
+        <div class="grid md:grid-cols-2">
             <div>
                 <img src="https://static.wixstatic.com/media/f00125_85871fc0231e457b8ef32a98690918f3~mv2.jpg/v1/fill/w_676,h_598,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f00125_85871fc0231e457b8ef32a98690918f3~mv2.jpg"
                     alt="">
             </div>
 
-            <div class="grid place-items-center text-center">
+            <div class="grid place-items-center text-center mt-8">
                 <div class="w-full">
                     <h3 class="font-bold text-4xl">立即體驗</h3>
                     <h3 class="text-[#FF7919] my-2 text-4xl">Starkid 課程</h3>
