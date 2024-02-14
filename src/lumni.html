@@ -30,10 +30,16 @@
             content: "";
             z-index: 99;
             position: absolute;
-            left: 19rem;
+            left: 10rem;
             top: 4rem;
             border: 0.5rem solid rgba(0, 0, 0, 0);
             border-top: 0.5rem solid var(--white);
+        }
+
+        @media (min-width: 768px) {
+            .header-v2:after {
+                left: 19rem;
+            }
         }
     </style>
 </head>
@@ -41,7 +47,7 @@
 <body>
 
     <!-- Sidebar -->
-    <div class="fixed top-52 left-11 h-[400px] w-52 overflow-auto z-20 bg-white border rounded-xl">
+    <div class="hidden lg:block fixed top-52 left-11 h-[400px] w-52 overflow-auto z-20 bg-white border rounded-xl">
         <div class="flex flex-col space-y-2">
             <a href="#" class="p-3 pt-4 border-t border-t-[#c9c3ba] border-l-4 border-l-[#3F52FF]">Math</a>
             <a href="#" class="p-3 border-t border-t-[#c9c3ba] hover:font-bold">French</a>
@@ -52,24 +58,31 @@
             <a href="#" class="p-3 text-sm border-t border-t-[#c9c3ba] hover:font-bold">Artistic teachings</a>
             <a href="#" class="p-3 border-t border-t-[#c9c3ba] hover:font-bold">Media education</a>
             <a href="#" class="p-3 text-sm border-t border-t-[#c9c3ba] hover:font-bold">Discovery of professions</a>
-            <a href="#" class="p-3 text-sm border-t border-t-[#c9c3ba] hover:font-bold">Take care of yourself and others</a>
+            <a href="#" class="p-3 text-sm border-t border-t-[#c9c3ba] hover:font-bold">Take care of yourself and
+                others</a>
         </div>
     </div>
 
     <!-- Navigation -->
     <header class="text-gray-600 body-font bg-black header-v2">
         <div class="container mx-auto flex flex-wrap p-5 px-0 flex-col md:flex-row items-center">
-            <div class="flex title-font space-x-8 font-medium items-center text-white mb-4 md:mb-0">
-                <img src="https://www.lumni.fr/images/logos/logo.svg" class="pr-10">
+            <div class="flex title-font space-x-6 md:space-x-8 font-medium items-center text-white mb-4 md:mb-0">
+                <div class="text-white md:hidden block mr-2 md:mr-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+                    </svg>
+                </div>
+                <img src="https://www.lumni.fr/images/logos/logo.svg" class="md:pr-10">
 
                 <div class="flex items-center space-x-4 text-sm tongue-nav">
-                    <button type="button" class="font-light border-l border-white pl-10">I AM: &nbsp;</button>
+                    <button type="button" class="font-light md:border-l border-white md:pl-10">I AM: &nbsp;</button>
                     <button type="button">PUPIL</button>
                     <button type="button" class="text-sm font-light border-l border-white pl-10">TEACHER</button>
-                    <span class="tongue mt-16"></span>
+                    <span class="tongue left-12 md:left-24 mt-24 md:mt-16"></span>
                 </div>
             </div>
-            <nav class="md:ml-auto flex flex-wrap items-center gap-2 text-sm tracking-widest text-white justify-center">
+            <nav
+                class="hidden md:ml-auto md:flex md:flex-wrap md:items-center md:gap-2 text-sm tracking-widest text-white justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
                     <path fill="currentColor"
                         d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z" />
@@ -90,16 +103,19 @@
                 <div class="rounded-full p-[5px] bg-black"></div>
                 <a href="#" class="hover:font-bold">High school</a>
             </div>
-            <div class="md:ml-auto flex flex-wrap items-center text-sm space-x-8 justify-center">
+
+            <div class="md:ml-auto flex md:flex-wrap md:items-center text-sm space-x-8 justify-center">
                 <div class="flex items-center space-x-4">
-                    <div class="text-black">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5l-1.5 1.5l-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16A6.5 6.5 0 0 1 3 9.5A6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14S14 12 14 9.5S12 5 9.5 5" />
-                        </svg>
+                    <div class="hidden md:flex md:items-center space-x-4">
+                        <div class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5l-1.5 1.5l-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16A6.5 6.5 0 0 1 3 9.5A6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14S14 12 14 9.5S12 5 9.5 5" />
+                            </svg>
+                        </div>
+                        <a href="#">To research</a>
                     </div>
-                    <a href="#">To research</a>
-                    <div class="rounded-full p-[5px] bg-black"></div>
+                    <div class="hidden md:block rounded-full p-[5px] bg-black"></div>
                     <button
                         class="flex items-center rounded-full p-2 px-3 shadow-md shadow-black gap-2 border border-b-2 border-black font-bold">
                         <img src="https://www.lumni.fr/images/emojis/lumniz.png" class="max-w-6">
@@ -137,8 +153,8 @@
         <!-- end bread-crubs -->
 
         <div class="flex">
-            <div class="w-1/3 max-w-[280px]"></div>
-            <div class="w-full pb-12 pr-8 border-b border-b-[#E6DCCF]">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-12 pr-4 md:pr-8 border-b border-b-[#E6DCCF]">
                 <div class="flex items-start space-x-4">
                     <div class="bg-white p-4 py-6 font-bold text-3xl space-y-4">
                         <h3>Math</h3>
@@ -149,7 +165,7 @@
                 <p class="font-bold text-[#48484d] my-4 mt-3">Choose the chapter you want to review...</p>
 
                 <!-- Chapters -->
-                <div class="grid grid-cols-2 gap-6 mt-3 text-[#1f1f1f]">
+                <div class="grid gap-4 md:grid-cols-2 md:gap-6 mt-3 text-[#1f1f1f]">
                     <!-- A chapter card -->
                     <div
                         class="flex items-center justify-between p-2 py-4 pl-6 bg-white rounded-2xl border border-b-2 border-black shadow-md shadow-[#393939] cursor-pointer hover:bg-[#EFEFEF]">
@@ -199,8 +215,8 @@
 
         <!--  -->
         <div class="flex">
-            <div class="w-1/3 max-w-[280px]"></div>
-            <div class="w-full pb-12 pr-8">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-12 pr-4 md:pr-8">
                 <div class="p-4 my-7 mb-14 bg-white text-2xl font-bold max-w-48 text-center">
                     For further...
                 </div>
@@ -209,7 +225,7 @@
                 </div>
 
                 <!-- slider cards -->
-                <div class="grid grid-cols-3 gap-10">
+                <div class="grid gap-4 md:grid-cols-3 md:gap-10">
                     <div
                         class="flex flex-col items-center justify-center relative p-3 pb-24 space-y-4 bg-[#F3E5B9] rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110">
                         <div class="w-full">
@@ -282,13 +298,13 @@
 
         <!--  -->
         <div class="flex">
-            <div class="w-1/3 max-w-[280px]"></div>
-            <div class="w-full pb-12 pr-8">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-12 pr-4 md:pr-8 border-b border-b-[#E6DCCF]">
                 <div class="p-4 my-7 mt-4 bg-white text-2xl font-bold max-w-[21rem] text-center">
                     Maths games and quizzes
                 </div>
 
-                <div class="grid grid-cols-3 gap-10">
+                <div class="grid gap-4 md:grid-cols-3 md:gap-10">
                     <div
                         class="flex flex-col items-center justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110">
                         <div class="w-full">
@@ -379,11 +395,11 @@
 
         <!--  -->
         <div class="flex">
-            <div class="w-1/3 max-w-[280px]"></div>
-            <div class="w-full pb-12 pr-8">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-12 pr-4 md:pr-8 border-b border-b-[#E6DCCF]">
                 <h3 class="font-bold text-lg mb-6">Most viewed</h3>
 
-                <div class="grid grid-cols-2 gap-6">
+                <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
                     <div class="rounded-xl p-3 shadow-lg bg-white relative cursor-pointer">
                         <span class="absolute top-0 left-0 p-1 px-3 z-10 text-xs bg-white font-semibold"
                             style="border-radius: 0.75rem 0 0.75rem 0;">Restricted</span>
@@ -570,9 +586,9 @@
             class="after:content-[''] after:w-7 after:absolute after:top-0 after:left-0 after:bg-[#3F52FF] after:h-[100%] ">
         </div>
 
-        <div class="flex mt-8">
-            <div class="w-1/3 max-w-[280px]"></div>
-            <div class="w-full pb-8 pr-8 space-y-4">
+        <div class="flex mt-4 md:mt-8">
+            <div class="hidden md:block w-1/3 max-w-[280px]"></div>
+            <div class="w-full ps-11 md:ps-0 pb-8 pr-4 md:pr-8 border-b border-b-[#E6DCCF] space-y-4">
                 <img src="https://www.lumni.fr/images/logos/logo-b.svg" alt="">
                 <p>
                     The CP, or preparatory course, is the first class of elementary school whose priority objectives are
@@ -593,7 +609,7 @@
                 <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                     <h2 class="title-font font-bold tracking-widest text-sm mb-3 text-white">Our partners</h2>
                 </a>
-                <div class="">
+                <div class="flex md:justify-start justify-center">
                     <img src="https://www.lumni.fr/images/logos/nation.svg" alt="">
                 </div>
             </div>
