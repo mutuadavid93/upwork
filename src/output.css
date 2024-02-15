@@ -956,6 +956,10 @@ video {
   cursor: pointer;
 }
 
+.cursor-progress {
+  cursor: progress;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -1026,6 +1030,10 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-36 {
+  gap: 9rem;
 }
 
 .space-x-16 > :not([hidden]) ~ :not([hidden]) {
@@ -1963,6 +1971,10 @@ video {
     display: flex;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2045,6 +2057,10 @@ video {
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-32 {
+    gap: 8rem;
   }
 
   .md\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
