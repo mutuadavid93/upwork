@@ -42,11 +42,11 @@
                     <img src="images/starkid-logo.png" alt="">
                 </a>
 
-                <div class="text-black cursor-progress md:hidden">
+                <button type="button" id="open-mobile-menu" class="text-black cursor-pointer md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z" />
                     </svg>
-                </div>
+                </button>
             </div>
 
             <div class="hidden md:flex space-x-3 md:space-x-7 -mt-3 text-xs md:text-lg">
@@ -447,9 +447,9 @@
     <!-- Mobile Overlay Menu : class="fixed top-0 left-0 md:hidden w-screen h-screen z-40" 
     -translate-x-full
     -->
-    <div
-        class="fixed top-0 left-0 md:hidden w-screen  h-screen bg-[#F4F4F4] z-40 p-4 overflow-y-auto transition-transform">
-        <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example"
+    <div id="drawer"
+        class="fixed top-0 left-0 md:hidden w-screen  h-screen bg-[#F4F4F4] z-40 p-4 pb-16 overflow-y-auto  transition-transform -translate-x-full">
+        <button id="close-drawer" type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example"
             class="text-[#7A7A7A] bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-4 end-4 flex items-center justify-center">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -457,10 +457,53 @@
             </svg>
         </button>
 
-        <ul class="flex flex-col items-center justify-center mt-28 text-2xl space-y-4">
-            <li class="text-[#EF9787]">Starkid 主頁</li>
-        </ul>
+        <div class="flex flex-col items-center justify-center text-center text-text-title mt-20 text-xl space-y-4">
+            <div class="text-[#EF9787]">Starkid 主頁</div>
+            <div class="border-b-2 border-b-gray-400 w-52"></div>
+            <div>關於我們</div>
+            <div class="border-b-2 border-b-gray-400 w-52"></div>
+            <div>為何選擇我們</div>
+            <div class="border-b-2 border-b-gray-400 w-52"></div>
+            <div>課程框架</div>
+            <div class="border-b-2 border-b-gray-400 w-52"></div>
+            <div>AI故事書課程</div>
+            <div class="border-b-2 border-b-gray-400 w-52"></div>
+            <div>收費及計劃</div>
+            <div class="border-b-2 border-b-gray-400 w-52"></div>
+            <div>AiMagic</div>
+            <div class="border-b-2 border-b-gray-400 w-52"></div>
+            <div>網誌</div>
+            <div class="border-b-2 border-b-gray-400 w-52"></div>
+            <div>登入</div>
+        </div>
     </div>
+
+    <div id="menu-bar"
+        class="fixed z-40 w-full md:hidden left-0 bottom-0 py-4 bg-gray-300 flex items-center justify-center text-center
+        transition-transform -translate-x-full">
+        <img src="https://static.parastorage.com/services/linguist-flags/1.663.0/assets/flags/square/HKG.svg"
+            class="max-w-16">
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var openButton = document.getElementById('open-mobile-menu');
+            var closeButton = document.getElementById('close-drawer');
+            var drawer = document.getElementById('drawer');
+            var menuBar = document.getElementById('menu-bar');
+
+            openButton.addEventListener('click', function () {
+                drawer.classList.remove('-translate-x-full');
+                menuBar.classList.remove('-translate-x-full');
+            });
+
+            closeButton.addEventListener('click', function () {
+                drawer.classList.add('-translate-x-full');
+                menuBar.classList.add('-translate-x-full');
+            });
+        });
+    </script>
 </body>
 
 </html>
