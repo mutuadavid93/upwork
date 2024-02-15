@@ -37,7 +37,7 @@
                 <img src="https://www.lumni.fr/images/logos/logo-b.svg" alt="">
             </div>
 
-            <div class="md:ml-auto flex md:flex-wrap md:items-center text-sm space-x-8 justify-center">
+            <div class="md:ml-auto flex relative md:flex-wrap md:items-center text-sm space-x-8 justify-center">
                 <div class="flex items-center space-x-4">
                     <div class="hidden md:flex md:items-center space-x-4">
                         <div class="text-black">
@@ -56,7 +56,7 @@
                     </button>
                 </div>
 
-                <button
+                <button id="my-account"
                     class="flex items-center rounded-full bg-[#3F52FF] p-2 px-8 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#6975e3]">
                     <div class="relative max-w-6">
                         <img src="https://www.lumni.fr/images/icons/gamification/lumniz.svg" class="max-w-6" />
@@ -65,6 +65,24 @@
                     My account
                 </button>
 
+                <!-- Submenu -->
+                <div id="submenu"
+                    class="absolute hidden bg-[#3F52FF] border border-[#3F52FF] shadow-xl z-30 top-14 right-0 w-[15.625rem] rounded-2xl p-4  mt-1">
+                    <button
+                        class="flex items-center justify-center bg-white w-full rounded-full py-3 px-3 shadow-md gap-2 border border-b-2 border-black hover:bg-[#EFEFEF] text-sm font-semibold">
+                        I create my account
+                    </button>
+                    <div class="py-5 font-semibold border-b border-b-gray-400 text-center text-white">
+                        I connect
+                    </div>
+
+                    <ul class="text-white text-base space-y-4 py-4">
+                        <li>My profile</li>
+                        <li>My favourites</li>
+                        <li>My history</li>
+                        <li>My settings</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -92,8 +110,11 @@
                     <div class="w-full">
                         <div class="relative shadow-container p-3 bg-white rounded-xl mb-8 flex  justify-center">
                             <!-- Start Quiz Button -->
-                            <button class="absolute bottom-10 z-20 font-semibold py-4 px-8 bg-[#3F52FF] rounded-xl text-white">Start the quiz</button>
-                            <img src="https://medias.lumni.fr/1Dydv0LYj0n8-RhE51FXFqsSw4Q/828x466/filters:focal(0x0:0x0):quality(85):max_bytes(120000)/6352b6ac9b16b185220bf38a" class="rounded-xl object-cover" />
+                            <button
+                                class="absolute bottom-10 z-20 font-semibold py-4 px-8 bg-[#3F52FF] rounded-xl text-white">Start
+                                the quiz</button>
+                            <img src="https://medias.lumni.fr/1Dydv0LYj0n8-RhE51FXFqsSw4Q/828x466/filters:focal(0x0:0x0):quality(85):max_bytes(120000)/6352b6ac9b16b185220bf38a"
+                                class="rounded-xl object-cover" />
                         </div>
 
                         <!-- start quiz -->
@@ -253,7 +274,8 @@
                     </div>
                     <div class="md:w-2/4 space-y-4 mt-6 md:mt-0">
                         <!-- md:rotate-4 p-4 mb-8 bg-white text-2xl font-bold md:max-w-72 text-center -->
-                        <div class="md:rotate-4 py-3 md:py-4 px-1 mb-6 md:mb-8 bg-white text-xl md:text-2xl font-bold md:max-w-72 text-center">
+                        <div
+                            class="md:rotate-4 py-3 md:py-4 px-1 mb-6 md:mb-8 bg-white text-xl md:text-2xl font-bold md:max-w-72 text-center">
                             On the same topic
                         </div>
 
@@ -706,16 +728,25 @@
     </footer>
 
     <script>
-        const tongue = document.querySelector('.tongue');
-        const navLinks = document.querySelectorAll('.tongue-nav button')
+        document.addEventListener('DOMContentLoaded', function () {
+            var accountButton = document.getElementById('my-account');
+            var submenu = document.getElementById('submenu');
 
-        navLinks.forEach((link) => {
-            link.addEventListener('click', (e) => {
-                // Prevent the default action of the link
-                e.preventDefault();
+            // Initially hide the submenu
+            submenu.style.display = 'none';
 
-                // Move the tongue to the clicked link
-                tongue.style.left = link.offsetLeft + 'px';
+            accountButton.addEventListener('click', function ($event) {
+                $event.stopPropagation();
+                if (submenu.style.display === 'none') {
+                    submenu.style.display = 'block';
+                } else {
+                    submenu.style.display = 'none';
+                }
+            });
+
+            // Hide when user clicks outside
+            document.addEventListener('click', function () {
+                submenu.style.display = 'none';
             });
         });
     </script>
