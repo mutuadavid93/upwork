@@ -8,40 +8,6 @@
     <style>
         @import url('lumnis.css');
     </style>
-
-    <style>
-        .tongue-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .tongue {
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid #F2EDE6;
-            position: absolute;
-        }
-
-        .header-v2:after {
-            content: "";
-            z-index: 99;
-            position: absolute;
-            left: 10rem;
-            top: 4rem;
-            border: 0.5rem solid rgba(0, 0, 0, 0);
-            border-top: 0.5rem solid var(--white);
-        }
-
-        @media (min-width: 768px) {
-            .header-v2:after {
-                left: 19rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -62,35 +28,6 @@
                 others</a>
         </div>
     </div>
-
-    <!-- Navigation -->
-    <header class="text-gray-600 body-font bg-black header-v2">
-        <div class="container mx-auto flex flex-wrap p-5 px-0 flex-col md:flex-row items-center">
-            <div class="flex title-font space-x-6 md:space-x-8 font-medium items-center text-white mb-4 md:mb-0">
-                <div class="text-white md:hidden block mr-2 md:mr-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
-                    </svg>
-                </div>
-                <img src="https://www.lumni.fr/images/logos/logo.svg" class="md:pr-10">
-
-                <div class="flex items-center space-x-4 text-sm tongue-nav">
-                    <button type="button" class="font-light md:border-l border-white md:pl-10">I AM: &nbsp;</button>
-                    <button type="button">PUPIL</button>
-                    <button type="button" class="text-sm font-light border-l border-white pl-10">TEACHER</button>
-                    <span class="tongue left-12 md:left-24 mt-24 md:mt-16"></span>
-                </div>
-            </div>
-            <nav
-                class="hidden md:ml-auto md:flex md:flex-wrap md:items-center md:gap-2 text-sm tracking-widest text-white justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                        d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z" />
-                </svg>
-                TO SUBSCRIBE TO THE NEWSLETTER, CLICK HERE
-            </nav>
-        </div>
-    </header>
 
     <header class="text-black body-font bg-[#F2EDE6] border-b-2 border-b-gray-300">
         <div class="container mx-auto flex flex-wrap p-5 px-0 flex-col md:flex-row items-center">
@@ -156,9 +93,8 @@
             <div class="hidden md:block w-1/3 max-w-[280px]"></div>
             <div class="w-full ps-11 md:ps-0 pb-12 pr-4 md:pr-8 border-b border-b-[#E6DCCF]">
                 <div class="flex items-start space-x-4">
-                    <div class="bg-white p-4 py-6 font-bold text-3xl space-y-4">
-                        <h3>Math</h3>
-                        <h3>in CP</h3>
+                    <div class="bg-white p-4 font-bold text-3xl space-y-4">
+                        <h3>Math in CP</h3>
                     </div>
                     <img src="https://www.lumni.fr/images/emojis/smiling-face.png" class="max-w-16 -mt-1.5">
                 </div>
