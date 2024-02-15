@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         "text-title": "#232323",
         "hover-gray": "#EFEFEF"
-      }
+      },
     }
   },
   plugins: []
