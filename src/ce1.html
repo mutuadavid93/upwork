@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('output.css');
+
+        /* .this-week-card::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
+        } */
+    </style>
+</head>
+
+<body>
+    <header class="text-black body-font bg-[#F2EDE6] border-b-2 border-b-gray-300">
+        <div class="container mx-auto flex flex-wrap p-5 px-0 flex-col md:flex-row items-center">
+            <div class="flex space-x-4 title-font items-center text-gray-900 mb-4 md:mb-0">
+                <img src="https://www.lumni.fr/images/logos/logo-b.svg" alt="">
+            </div>
+
+            <div class="md:ml-auto flex md:flex-wrap md:items-center text-sm space-x-8 justify-center">
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:flex md:items-center space-x-4">
+                        <div class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5l-1.5 1.5l-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16A6.5 6.5 0 0 1 3 9.5A6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14S14 12 14 9.5S12 5 9.5 5" />
+                            </svg>
+                        </div>
+                        <a href="#">To research</a>
+                    </div>
+                    <div class="hidden md:block rounded-full p-[5px] bg-black"></div>
+                    <button
+                        class="flex items-center rounded-full p-2 px-3 shadow-md shadow-black gap-2 border border-b-2 border-black font-bold">
+                        <img src="https://www.lumni.fr/images/emojis/lumniz.png" class="max-w-6">
+                        0 Lumniz
+                    </button>
+                </div>
+
+                <button
+                    class="flex items-center rounded-full bg-[#3F52FF] p-2 px-8 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#6975e3]">
+                    <div class="relative max-w-6">
+                        <img src="https://www.lumni.fr/images/icons/gamification/lumniz.svg" class="max-w-6" />
+                        <p class="absolute inset-0 top-1 text-black">0</p>
+                    </div>
+                    My account
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-[#E6DCCF] border-t border-t-[#E6DCCF]">
+        <div
+            class="after:content-[''] after:w-7 after:absolute after:top-0 after:left-0 after:bg-[#3F52FF] after:h-[100%] ">
+        </div>
+
+        <div class="w-full border-l-8 border-green-300 ps-9">
+            <div class="flex items-center space-x-2 my-4 text-sm">
+                <a href="#" class="hover:underline">Primaire</a>
+                <a href="#" class="hover:underline border-x border-x-black px-2">CP</a>
+                <a href="#" class="hover:underline font-bold">Maths</a>
+            </div>
+        </div>
+        <!-- 2.875rem 3.125rem -->
+        <div class="ps-11 py-4">
+            <div class="flex items-center space-x-6 mb-8">
+                <h3 class="text-4xl font-extrabold">Welcome to CE1</h3>
+                <img src="https://www.lumni.fr/images/emojis/emoji_hpn.png" class="max-w-12" />
+            </div>
+            <div class="-rotate-2 p-4 my-16 mt-4 bg-white text-2xl font-bold max-w-[21rem] text-center">
+                Choose a theme, a subject
+            </div>
+
+            <div class="my-4">
+                <div class="grid gap-4 md:flex md:items-center md:space-x-6">
+                    <button
+                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                        <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png" class="md:h-8 h-4">
+                        Math
+                    </button>
+                    <button
+                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                        <img src="https://www.lumni.fr/images/emojis/subjects/langage.png" class="md:h-8 h-4">
+                        French
+                    </button>
+                    <button
+                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF]  md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                        <img src="https://www.lumni.fr/images/emojis/subjects/questionner-le-monde.png"
+                            class="md:h-8 h-4">
+                        Question the world
+                    </button>
+                    <button
+                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                        <img src="https://www.lumni.fr/images/emojis/subjects/enseignement-moral-et-civique.png"
+                            class="md:h-8 h-4">
+                        EMC
+                    </button>
+                    <button
+                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                        <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png" class="md:h-8 h-4">
+                        Math
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-[#FFCAC2] border-t border-t-[#FFCAC2] py-16 ps-11">
+        <div
+            class="after:content-[''] after:w-7 after:absolute after:top-0 after:left-0 after:bg-[#FF9281] after:h-[100%] ">
+        </div>
+
+        <div class="-rotate-2 p-4 mt-7 bg-white text-2xl font-bold max-w-48 text-center">
+            Do not miss
+        </div>
+        <div class="-rotate-2 p-4 mb-14 bg-white text-2xl font-bold max-w-36 text-center">
+            this week
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-4 md:gap-6 pr-4">
+            <div
+                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container">
+                <div
+                    class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
+                    <img src="https://medias.lumni.fr/tiqVCiDxXzkAxZx5n0kC2-q1OjM/276x388/filters:focal(420x590:419x589):quality(80):max_bytes(120000)/65cce02fd0edfa23580eaab2"
+                        class="w-full h-full rounded-[2.8rem] object-cover" />
+
+                    <!-- Push the text content to the bottom -->
+                    <div class="absolute bottom-0 left-0 right-0 p-5 pt-0">
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-lg text-text-title bg-white pt-1 pb-0.5 z-10 font-medium">
+                            Is TikTok dangerous?
+                        </p>
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-sm text-text-title bg-white pt-1 pb-0.5 z-10 font-light">
+                            Laughter, fun, but also addiction!
+                        </p>
+                    </div>
+                </div>
+                <span class="absolute -top-2.5 left-3 p-1.5 px-3 z-1 text-xs bg-white font-semibold"
+                    style="border-radius: 2rem 0 0.75rem 0;">
+                    <img src="https://www.lumni.fr/images/emojis/clapperboard.png" class="max-w-8">
+                </span>
+            </div>
+            <div
+                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container">
+                <div
+                    class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
+                    <img src="https://medias.lumni.fr/XVs-9v_iUjBvhuS9zDr8bVtFHjk/276x388/filters:focal(303x426:302x425):quality(80):max_bytes(120000)/65cde61e16c1f5e35507b362"
+                        class="w-full h-full rounded-[2.8rem] object-cover" />
+
+                    <!-- Push the text content to the bottom -->
+                    <div class="absolute bottom-0 left-0 right-0 p-5 pt-0">
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-lg text-text-title bg-white pt-1 pb-0.5 z-10 font-medium">
+                            Everything you need to <br>know about whales
+                        </p>
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-sm text-text-title bg-white pt-1 pb-0.5 z-10 font-light">
+                            Discover an animal heavier than twenty elephants!
+                        </p>
+                    </div>
+                </div>
+                <span class="absolute -top-2.5 left-3 p-1.5 px-3 z-1 text-xs bg-white font-semibold"
+                    style="border-radius: 2rem 0 0.75rem 0;">
+                    <img src="https://www.lumni.fr/images/emojis/clapperboard.png" class="max-w-8">
+                </span>
+            </div>
+            <div
+                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container">
+                <div
+                    class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
+                    <img src="https://medias.lumni.fr/PMysfWyvKKZu_Aq-BebItz9ZW24/276x388/filters:focal(172x205:171x204):quality(80):max_bytes(120000)/65cdd8c2f42b8f4a530b254e"
+                        class="w-full h-full rounded-[2.8rem] object-cover" />
+
+                    <!-- Push the text content to the bottom -->
+                    <div class="absolute bottom-0 left-0 right-0 p-5 pt-0">
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-lg text-text-title bg-white pt-1 pb-0.5 z-10 font-medium">
+                            Organic farming
+                        </p>
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-sm text-text-title bg-white pt-1 pb-0.5 z-10 font-light">
+                            The Scooby-Gang explains to you what organic farming is.
+                        </p>
+                    </div>
+                </div>
+                <span class="absolute -top-2.5 left-3 p-1.5 px-3 z-1 text-xs bg-white font-semibold"
+                    style="border-radius: 2rem 0 0.75rem 0;">
+                    <img src="https://www.lumni.fr/images/emojis/clapperboard.png" class="max-w-8">
+                </span>
+            </div>
+            <div
+                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container">
+                <div
+                    class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
+                    <img src="https://medias.lumni.fr/WTsZE0Eo-FzuF2EBgaDgs3aLQFg/276x388/filters:focal(448x629:447x628):quality(80):max_bytes(120000)/65ccba08b82ced7d240198cc"
+                        class="w-full h-full rounded-[2.8rem] object-cover" />
+
+                    <!-- Push the text content to the bottom -->
+                    <div class="absolute bottom-0 left-0 right-0 p-5 pt-0">
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-lg text-text-title bg-white pt-1 pb-0.5 z-10 font-medium">
+                            English: the fall
+                        </p>
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-sm text-text-title bg-white pt-1 pb-0.5 z-10 font-light">
+                            Don't forget your helmet before having fun!
+                        </p>
+                    </div>
+                </div>
+                <span class="absolute -top-2.5 left-3 p-1.5 px-3 z-1 text-xs bg-white font-semibold"
+                    style="border-radius: 2rem 0 0.75rem 0;">
+                    <img src="https://www.lumni.fr/images/emojis/clapperboard.png" class="max-w-8">
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-[#F2EDE6] border-t border-t-[#F2EDE6] py-16 ps-11">
+        <div
+            class="after:content-[''] after:w-7 after:absolute after:top-0 after:left-0 after:bg-[#2FC97F] after:h-[100%] ">
+        </div>
+
+        <div class="-rotate-2 p-2 ps-2 pe-2 inline-block mb-14 bg-white text-2xl font-bold text-center">
+            🦸‍♀️ Find your Lumni heroes 🦸‍♂️
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-4 md:gap-6 pr-4">
+            <div
+                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container aspect-square group">
+                <div class="w-full relative flex items-center justify-center p-4">
+                    <div
+                        class="absolute rounded-[2.8rem] bg-gradient-to-r from-[#ffb800] via-[#ffb800] to-[#ffb800] inset-0 -z-10">
+                    </div>
+                    <img src="https://medias.lumni.fr/fUVneTllno4EZ4DQTzwaXzoNW3I/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/654d1ac68af4af70c00b5fa2"
+                        class="absolute top-[50%] group-transform group-transition-transform group-duration-500 group-ease-in-out group-hover:scale-75 z-10">
+                    <img src="https://medias.lumni.fr/LnXUIEsEImyTNA5AobF5-w56RvI/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/654d1ac55db710275e09e574"
+                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110" />
+                </div>
+                <button
+                    class="flex flex-col justify-center items-center absolute -top-4.5 right-7 p-1 z-1 rounded-full border border-black shadow-custom bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                    </svg>
+                </button>
+            </div>
+            <div
+                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container aspect-square group">
+                <div class="w-full relative flex items-center justify-center p-4 cursor-pointer">
+                    <div
+                        class="absolute rounded-[2.8rem] bg-gradient-to-r from-[#067355] via-[#067355] to-[#067355] inset-0 -z-10">
+                    </div>
+                    <img src="https://medias.lumni.fr/j34Cb0xROYWXXAb6XVUowUMaRl8/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/6530ee6705f2ef4a79079ae7"
+                        class="absolute top-[50%] group-transform group-transition-transform group-duration-500 group-ease-in-out group-hover:scale-75 z-10">
+                    <img src="https://medias.lumni.fr/W_Urjw5hgBy1lpnlwc19NtCdjGY/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/6530ee660eacc083af0f6d2e"
+                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110" />
+                </div>
+                <button
+                    class="flex flex-col justify-center items-center absolute -top-4.5 right-7 p-1 z-1 rounded-full border border-black shadow-custom bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                    </svg>
+                </button>
+            </div>
+            <div
+                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container aspect-square group">
+                <div class="w-full relative flex items-center justify-center p-4 cursor-pointer">
+                    <div
+                        class="absolute rounded-[2.8rem] bg-gradient-to-r from-[#3c288d] via-[#3c288d] to-[#3c288d] inset-0 -z-10">
+                    </div>
+                    <img src="https://medias.lumni.fr/pgjWY_D2XxuZ8qlZSfQJ7IHBM54/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/652faeca495fd87a640b0e10"
+                        class="absolute top-[50%] group-transform group-transition-transform group-duration-500 group-ease-in-out group-hover:scale-75 z-10">
+                    <img src="https://medias.lumni.fr/H9WYdF62qJ15ffAw8ca-sjDFT5g/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/652faec9b80d6624430abd5c"
+                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110" />
+                </div>
+                <button
+                    class="flex flex-col justify-center items-center absolute -top-4.5 right-7 p-1 z-1 rounded-full border border-black shadow-custom bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                    </svg>
+                </button>
+            </div>
+            <div
+                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container aspect-square group">
+                <div class="w-full relative flex items-center justify-center p-4 cursor-pointer">
+                    <div
+                        class="absolute rounded-[2.8rem] bg-gradient-to-r from-[#01a0e9] via-[#01a0e9] to-[#01a0e9] inset-0 -z-10">
+                    </div>
+                    <img src="https://medias.lumni.fr/f7OdeEACQskU6HDyu8s_cIwDcBE/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/6530ee1bd2d05e9e16016eae"
+                        class="absolute top-[50%] group-transform group-transition-transform group-duration-500 group-ease-in-out group-hover:scale-75 z-10">
+                    <img src="https://medias.lumni.fr/K2gvDkgOX1pkM1ms6oiIhEvn898/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/6530ee1bddc10ba54c062139"
+                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110" />
+                </div>
+                <button
+                    class="flex flex-col justify-center items-center absolute -top-4.5 right-7 p-1 z-1 rounded-full border border-black shadow-custom bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="m12 19.654l-.758-.685q-2.448-2.236-4.05-3.829q-1.602-1.592-2.529-2.808q-.926-1.217-1.295-2.201Q3 9.146 3 8.15q0-1.908 1.296-3.204Q5.592 3.65 7.5 3.65q1.32 0 2.475.675T12 6.288Q12.87 5 14.025 4.325T16.5 3.65q1.908 0 3.204 1.296Q21 6.242 21 8.15q0 .996-.368 1.98q-.369.985-1.295 2.202q-.927 1.216-2.52 2.808q-1.592 1.593-4.06 3.83zm0-1.354q2.4-2.17 3.95-3.716q1.55-1.547 2.45-2.685t1.25-2.015Q20 9.006 20 8.15q0-1.5-1-2.5t-2.5-1q-1.194 0-2.204.682q-1.01.681-1.808 2.053h-.976q-.818-1.39-1.818-2.063q-1-.672-2.194-.672q-1.48 0-2.49 1Q4 6.65 4 8.15q0 .856.35 1.734t1.25 2.015t2.45 2.675Q9.6 16.112 12 18.3m0-6.825" />
+                    </svg>
+                </button>
+            </div>
+    </section>
+
+    <footer class="text-gray-600 body-font bg-[#3F52FF]">
+        <div
+            class="container px-5 py-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-6">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <h2 class="title-font font-bold tracking-widest text-sm mb-3 text-white">Our partners</h2>
+                </a>
+                <div class="flex md:justify-start justify-center">
+                    <img src="https://www.lumni.fr/images/logos/nation.svg" alt="">
+                </div>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first text-white">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4"></div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4 ">
+                    <h2 class="title-font font-bold tracking-widest text-sm mb-3 ">Programs</h2>
+                    <nav class="list-none mb-10 text-sm space-y-2">
+                        <li><a href="#">1 day, 1 question</a></li>
+                        <li><a href="#">Tell me about barrier gestures</a></li>
+                        <li><a href="#">Scooby-Doo in Europe</a></li>
+                        <li><a href="#">1 minute at the museum</a></li>
+                        <li><a href="#">Celestin</a></li>
+                        <li><a href="#">Professor Gamberge</a></li>
+                        <li><a href="#">Ralph and the Dinosaurs</a></li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium tracking-widest text-sm mb-3">Categories</h2>
+                    <nav class="list-none mb-10 text-sm space-y-2">
+                        <li><a href="#">The fundamentals</a></li>
+                        <li><a href="#">Grammar</a></li>
+                        <li><a href="#">Reading</a></li>
+                        <li><a href="#">Calculation</a></li>
+                        <li><a href="#">The planet</a></li>
+                        <li><a href="#">Animals</a></li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium tracking-widest text-sm mb-3">Our contents</h2>
+                    <nav class="list-none mb-10 text-sm space-y-2">
+                        <li><a href="#">1 day, 1 question</a></li>
+                        <li><a href="#">Tell me about barrier gestures</a></li>
+                        <li><a href="#">Scooby-Doo in Europe</a></li>
+                        <li><a href="#">1 minute at the museum</a></li>
+                        <li><a href="#">Celestin</a></li>
+                        <li><a href="#">Professor Gamberge</a></li>
+                        <li><a href="#">Ralph and the Dinosaurs</a></li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-black">
+            <div
+                class="container mx-auto py-4 px-5 flex text-xs font-light text-white space-x-4 flex-wrap justify-center text-center sm:flex-row">
+                <a href="#">CGU</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Manage my trackers</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Who are we ?</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Privacy Policy</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Legal Notice</a>
+                <div class="border-r border-r-white"></div>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
