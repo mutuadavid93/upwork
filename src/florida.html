@@ -30,6 +30,30 @@
                 margin-top: -14px;
             }
         }
+
+        .sub-menu {
+            display: none;
+            position: absolute;
+            /* top: 100%; */
+            top: calc(100% + 10px);
+            z-index: 1;
+        }
+
+        #dropdownNavbarLink:hover .sub-menu,
+        #dropdownNavbarLink:hover::after {
+            display: block;
+        }
+
+        /* Without this, the submenu will always dissappear as soon as you move away from #dropdownNavbarLink */
+        #dropdownNavbarLink::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            /* same as the gap */
+            height: 10px;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -70,22 +94,39 @@
         </button>
     </header>
 
-    <header class="hidden md:block text-gray-600 body-font">
+    <header id="menuContainer" class="hidden md:block text-gray-600 body-font">
         <div class="bg-[#20C85F] px-14 flex flex-wrap p-5 py-2 flex-col md:flex-row items-center">
             <a href="#" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                     <path fill="currentColor" d="m12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81zM12 3L2 12h3v8h6v-6h2v6h6v-8h3" />
                 </svg>
             </a>
-            <nav
+            <ul
                 class="md:ml-auto flex flex-wrap items-center space-x-6 text-base text-white font-medium justify-between">
-                <a class="text-[#0D3B66]">Home</a>
-                <a class="hover:text-[#0D3B66]">About</a>
-                <a class="hover:text-[#0D3B66]">Services</a>
-                <a class="hover:text-[#0D3B66]">Testimonials</a>
-                <a class="hover:text-[#0D3B66]">Contact</a>
-                <a class="hover:text-[#0D3B66]">Forclosure</a>
-            </nav>
+                <li class="text-[#0D3B66]">Home</li>
+                <!-- <li class="hover:text-[#0D3B66]">About</li> -->
+                <li href="#" class="relative hover:text-[#0D3B66]" id="dropdownNavbarLink">
+                    <div class="flex items-center space-x-2 cursor-pointer">
+                        Services
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                        </svg>
+                    </div>
+
+                    <div class="sub-menu absolute -left-4 rounded-lg shadow w-56 bg-white border">
+                        <ul class="py-2 text-sm text-gray-700 divide-y divide-gray-100">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:text-[#377ef9]">Foreclosure</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#" class="block px-4 py-2 hover:text-[#377ef9]">Short Sale</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li class="hover:text-[#0D3B66]">Testimonials</li> -->
+                <li class="hover:text-[#0D3B66]">Contact</li>
+            </ul>
         </div>
     </header>
 
@@ -114,13 +155,12 @@
                 style="padding: 0% 15% 0% 15%;">
                 <div class="space-y-4">
                     <h1
-                        class="text-[9vw] md:text-[4vw] text-white font-extrabold md:leading-[3.5rem] leading-[1em] md:tracking-normal tracking-widest">
-                        <span class="hidden md:block"><span class="block">WE BUY FIRE DAMAGED</span> HOUSES</span>
-                        <span class="md:hidden">WE BUY FIRE DAMAGED HOUSES</span>
+                        class="text-[9vw] md:text-[4vw] text-white font-extrabold md:leading-[3.5rem] leading-[1em] md:tracking-normal tracking-widest uppercase">
+                        <span class="hidden md:block"><span class="block">Solutions For All</span> Home owners</span>
+                        <span class="md:hidden">Solutions For All Home owners</span>
                     </h1>
                     <p class="text-lg md:text-[1.75vw] tracking-tighter md:tracking-wide leading-relaxed">
-                        We Buy Fire Damaged Houses pays cash for fire damaged property in all 50 states. Ready to sell
-                        your fire damaged house? Get started below!
+                        We Help You Keep Your Home, Sell Your Home, Or We Buy Your Home!
                     </p>
                     <div class="py-2 hidden md:block"></div>
                     <button class="text-[3vw] font-extrabold text-white bg-[#20C85F] hover:bg-[#33D977] 
@@ -498,18 +538,25 @@
             </svg>
         </button>
 
-        <div class="flex flex-col items-center justify-center text-center text-text-title mt-20 text-xl space-y-4">
+        <div class="flex flex-col items-center justify-center text-center  text-text-title mt-20 text-xl space-y-4">
             <div class="text-[#0D3B66] hover:text-[#0D3B66]">Home</div>
             <div class="border-b-2 border-b-gray-400 w-52"></div>
-            <div class="hover:text-[#0D3B66]">About</div>
-            <div class="border-b-2 border-b-gray-400 w-52"></div>
-            <div class="hover:text-[#0D3B66]">Services</div>
-            <div class="border-b-2 border-b-gray-400 w-52"></div>
-            <div class="hover:text-[#0D3B66]">Testimonials</div>
+            <div class="w-52 hover:text-[#0D3B66] flex flex-col justify-center items-center">
+                <button type="button" id="mobile-dropdown" class="flex items-center space-x-2 cursor-pointer">
+                    Services
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z" />
+                    </svg>
+                </button>
+
+                <div class="submenu flex flex-col text-left w-full divide-y divide-[#0D3B66] text-base mt-4"
+                    style="display: none;">
+                    <a href="#" class="py-1">Foreclosure</a>
+                    <!-- <a href="#" class="py-1">Dashboard</a> -->
+                </div>
+            </div>
             <div class="border-b-2 border-b-gray-400 w-52"></div>
             <div class="hover:text-[#0D3B66]">Contact</div>
-            <div class="border-b-2 border-b-gray-400 w-52"></div>
-            <div class="hover:text-[#0D3B66]">Forclosure</div>
         </div>
     </div>
 
@@ -525,6 +572,21 @@
 
             closeButton.addEventListener('click', function () {
                 drawer.classList.add('-translate-x-full');
+            });
+
+            // Toggle Menu
+            var menuLink = document.querySelector("#mobile-dropdown");
+
+            menuLink.addEventListener("click", function ($event) {
+                var x = $event.currentTarget.nextElementSibling;
+                if (x && x.classList.contains('submenu')) {
+                    // x is the next sibling with class 'submenu'
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
             });
         });
     </script>
