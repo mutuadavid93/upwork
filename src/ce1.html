@@ -8,16 +8,6 @@
 
     <style>
         @import url('output.css');
-
-        /* .this-week-card::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
-        } */
     </style>
 </head>
 
@@ -82,8 +72,132 @@
                 Choose a theme, a subject
             </div>
 
-            <div class="my-4">
-                <div class="grid gap-4 md:flex md:items-center md:space-x-6">
+            <section class="flex items-center md:justify-center w-full md:pb-16 pb-[26rem]">
+                <div class="p-3 relative flex justify-center w-[97%]">
+                    <div class="w-full mx-auto" style="scroll-snap-type: x mandatory;">
+                        <!-- first -->
+                        <div class="">
+                            <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
+                            <!-- content #1 -->
+                            <div
+                                class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+
+                                <div class="md:py-4 pt-[23rem]">
+                                    <!-- menu -->
+                                    <div class="grid gap-4 md:flex md:items-center md:space-x-6">
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png"
+                                                class="md:h-6 h-4">
+                                            Math
+                                        </button>
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/langage.png"
+                                                class="md:h-6 h-4">
+                                            French
+                                        </button>
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/questionner-le-monde.png"
+                                                class="md:h-6 h-4">
+                                            Question the world
+                                        </button>
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/enseignement-moral-et-civique.png"
+                                                class="md:h-6 h-4">
+                                            EMC
+                                        </button>
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/activites.png"
+                                                class="md:h-6 h-4">
+                                            Activities
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- controls -->
+                                <div class="absolute md:top-[25%] top-[69%] w-full flex justify-between z-20">
+                                    <label for="carousel-2"
+                                        class="shadow-slider text-white cursor-pointer md:-translate-x-5 bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z" />
+                                        </svg>
+                                    </label>
+                                    <label for="carousel-2"
+                                        class="shadow-slider text-white cursor-pointer md:-translate-x-5 bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <input class="sr-only peer" type="radio" name="carousel" id="carousel-2" checked />
+                            <!-- content #1 -->
+                            <div
+                                class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+
+                                <div class="md:py-4 pt-[23rem]">
+                                    <!-- menu -->
+                                    <div class="grid gap-4 md:flex md:items-center md:space-x-6">
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png"
+                                                class="md:h-6 h-4">
+                                            Mathematics
+                                        </button>
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/langage.png"
+                                                class="md:h-6 h-4">
+                                            French
+                                        </button>
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/questionner-le-monde.png"
+                                                class="md:h-6 h-4">
+                                            Question the world
+                                        </button>
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/enseignement-moral-et-civique.png"
+                                                class="md:h-6 h-4">
+                                            EMC
+                                        </button>
+                                        <button
+                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
+                                            <img src="https://www.lumni.fr/images/emojis/subjects/activites.png"
+                                                class="md:h-6 h-4">
+                                            Activities
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- controls -->
+                                <div class="absolute md:top-[25%] top-[69%] w-full flex justify-between z-20">
+                                    <label for="carousel-1"
+                                        class="shadow-slider text-white cursor-pointer md:-translate-x-5 bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z" />
+                                        </svg>
+                                    </label>
+                                    <label for="carousel-1"
+                                        class="shadow-slider text-white cursor-pointer md:-translate-x-5 bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="my-4" id="subject-slider">
+                <!-- <div class="grid gap-4 md:flex md:items-center md:space-x-6">
                     <button
                         class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
                         <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png" class="md:h-8 h-4">
@@ -111,7 +225,7 @@
                         <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png" class="md:h-8 h-4">
                         Math
                     </button>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
