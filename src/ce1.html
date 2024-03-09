@@ -9,6 +9,31 @@
     <style>
         @import url('output.css');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        #home-slider .slick-track {
+            padding-top: 1rem;
+        }
+
+        #home-slider .slick-list {
+            height: 28rem !important;
+            overflow: hidden;
+        }
+
+        button[aria-disabled="true"] {
+            display: none !important;
+        }
+
+        #subject-slider .slick-slide .slick-current .slick-active {
+            width: 170px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,161 +97,11 @@
                 Choose a theme, a subject
             </div>
 
-            <section class="flex items-center md:justify-center w-full md:pb-16 pb-[26rem]">
-                <div class="p-3 relative flex justify-center w-[97%]">
-                    <div class="w-full mx-auto" style="scroll-snap-type: x mandatory;">
-                        <!-- first -->
-                        <div class="">
-                            <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
-                            <!-- content #1 -->
-                            <div
-                                class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
-
-                                <div class="md:py-4 pt-[23rem]">
-                                    <!-- menu -->
-                                    <div class="grid gap-4 md:flex md:items-center md:space-x-6">
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png"
-                                                class="md:h-6 h-4">
-                                            Math
-                                        </button>
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/langage.png"
-                                                class="md:h-6 h-4">
-                                            French
-                                        </button>
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/questionner-le-monde.png"
-                                                class="md:h-6 h-4">
-                                            Question the world
-                                        </button>
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/enseignement-moral-et-civique.png"
-                                                class="md:h-6 h-4">
-                                            EMC
-                                        </button>
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/activites.png"
-                                                class="md:h-6 h-4">
-                                            Activities
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- controls -->
-                                <div class="absolute md:top-[25%] top-[69%] w-full flex justify-between z-20">
-                                    <label for="carousel-2"
-                                        class="shadow-slider text-white cursor-pointer md:-translate-x-5 bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            viewBox="0 0 24 24">
-                                            <path fill="currentColor"
-                                                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z" />
-                                        </svg>
-                                    </label>
-                                    <label for="carousel-2"
-                                        class="shadow-slider text-white cursor-pointer md:-translate-x-5 bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="">
-                            <input class="sr-only peer" type="radio" name="carousel" id="carousel-2" checked />
-                            <!-- content #1 -->
-                            <div
-                                class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
-
-                                <div class="md:py-4 pt-[23rem]">
-                                    <!-- menu -->
-                                    <div class="grid gap-4 md:flex md:items-center md:space-x-6">
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png"
-                                                class="md:h-6 h-4">
-                                            Mathematics
-                                        </button>
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/langage.png"
-                                                class="md:h-6 h-4">
-                                            French
-                                        </button>
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/questionner-le-monde.png"
-                                                class="md:h-6 h-4">
-                                            Question the world
-                                        </button>
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/enseignement-moral-et-civique.png"
-                                                class="md:h-6 h-4">
-                                            EMC
-                                        </button>
-                                        <button
-                                            class="flex flex-col  items-center justify-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-1 md:px-16 p-2 h-20 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                                            <img src="https://www.lumni.fr/images/emojis/subjects/activites.png"
-                                                class="md:h-6 h-4">
-                                            Activities
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- controls -->
-                                <div class="absolute md:top-[25%] top-[69%] w-full flex justify-between z-20">
-                                    <label for="carousel-1"
-                                        class="shadow-slider text-white cursor-pointer md:-translate-x-5 bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            viewBox="0 0 24 24">
-                                            <path fill="currentColor"
-                                                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z" />
-                                        </svg>
-                                    </label>
-                                    <label for="carousel-1"
-                                        class="shadow-slider text-white cursor-pointer md:-translate-x-5 bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"/></svg>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section id="subject-slider" class="flex items-center md:justify-center w-full md:pb-16 pb-[26rem] space-x-4">
+                <div class="w-10 h-20 bg-red-500">Dave</div>
+                <div class="w-10 h-20 bg-red-500">Dave</div>
+                <div class="w-10 h-20 bg-red-500">Dave</div>
             </section>
-
-            <div class="my-4" id="subject-slider">
-                <!-- <div class="grid gap-4 md:flex md:items-center md:space-x-6">
-                    <button
-                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                        <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png" class="md:h-8 h-4">
-                        Math
-                    </button>
-                    <button
-                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                        <img src="https://www.lumni.fr/images/emojis/subjects/langage.png" class="md:h-8 h-4">
-                        French
-                    </button>
-                    <button
-                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF]  md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                        <img src="https://www.lumni.fr/images/emojis/subjects/questionner-le-monde.png"
-                            class="md:h-8 h-4">
-                        Question the world
-                    </button>
-                    <button
-                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                        <img src="https://www.lumni.fr/images/emojis/subjects/enseignement-moral-et-civique.png"
-                            class="md:h-8 h-4">
-                        EMC
-                    </button>
-                    <button
-                        class="flex flex-col items-center rounded-full hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF] md:p-4 md:px-16 p-2 shadow-md shadow-[#3F52FF] gap-2 font-bold text-white border border-b-2 border-[#2D3EBF]">
-                        <img src="https://www.lumni.fr/images/emojis/subjects/maths-primaire.png" class="md:h-8 h-4">
-                        Math
-                    </button>
-                </div> -->
-            </div>
         </div>
     </section>
 
@@ -242,9 +117,11 @@
             this week
         </div>
 
-        <div class="grid gap-4 md:grid-cols-4 md:gap-6 pr-4">
+
+        <!-- id="home-slider" class="grid gap-4 md:grid-cols-4 md:gap-6 pr-4"-->
+        <div id="home-slider" class="space-x-4 overflow-hidden relative">
             <div
-                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container">
+                class="flex max-w-[19rem] justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container">
                 <div
                     class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
                     <img src="https://medias.lumni.fr/tiqVCiDxXzkAxZx5n0kC2-q1OjM/276x388/filters:focal(420x590:419x589):quality(80):max_bytes(120000)/65cce02fd0edfa23580eaab2"
@@ -268,7 +145,55 @@
                 </span>
             </div>
             <div
-                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container">
+                class="flex max-w-[19rem] justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container">
+                <div
+                    class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
+                    <img src="https://medias.lumni.fr/tiqVCiDxXzkAxZx5n0kC2-q1OjM/276x388/filters:focal(420x590:419x589):quality(80):max_bytes(120000)/65cce02fd0edfa23580eaab2"
+                        class="w-full h-full rounded-[2.8rem] object-cover" />
+
+                    <!-- Push the text content to the bottom -->
+                    <div class="absolute bottom-0 left-0 right-0 p-5 pt-0">
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-lg text-text-title bg-white pt-1 pb-0.5 z-10 font-medium">
+                            Is TikTok dangerous?
+                        </p>
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-sm text-text-title bg-white pt-1 pb-0.5 z-10 font-light">
+                            Laughter, fun, but also addiction!
+                        </p>
+                    </div>
+                </div>
+                <span class="absolute -top-2.5 left-3 p-1.5 px-3 z-1 text-xs bg-white font-semibold"
+                    style="border-radius: 2rem 0 0.75rem 0;">
+                    <img src="https://www.lumni.fr/images/emojis/clapperboard.png" class="max-w-8">
+                </span>
+            </div>
+            <div
+                class="flex justify-center relative max-w-[19rem] p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container">
+                <div
+                    class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
+                    <img src="https://medias.lumni.fr/tiqVCiDxXzkAxZx5n0kC2-q1OjM/276x388/filters:focal(420x590:419x589):quality(80):max_bytes(120000)/65cce02fd0edfa23580eaab2"
+                        class="w-full h-full rounded-[2.8rem] object-cover" />
+
+                    <!-- Push the text content to the bottom -->
+                    <div class="absolute bottom-0 left-0 right-0 p-5 pt-0">
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-lg text-text-title bg-white pt-1 pb-0.5 z-10 font-medium">
+                            Is TikTok dangerous?
+                        </p>
+                        <p
+                            class="inline-block ps-2 pe-2 mb-2.5 text-sm text-text-title bg-white pt-1 pb-0.5 z-10 font-light">
+                            Laughter, fun, but also addiction!
+                        </p>
+                    </div>
+                </div>
+                <span class="absolute -top-2.5 left-3 p-1.5 px-3 z-1 text-xs bg-white font-semibold"
+                    style="border-radius: 2rem 0 0.75rem 0;">
+                    <img src="https://www.lumni.fr/images/emojis/clapperboard.png" class="max-w-8">
+                </span>
+            </div>
+            <div
+                class="flex justify-center relative max-w-[19rem] p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container">
                 <div
                     class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
                     <img src="https://medias.lumni.fr/XVs-9v_iUjBvhuS9zDr8bVtFHjk/276x388/filters:focal(303x426:302x425):quality(80):max_bytes(120000)/65cde61e16c1f5e35507b362"
@@ -292,7 +217,7 @@
                 </span>
             </div>
             <div
-                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container">
+                class="flex justify-center relative max-w-[19rem] p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container">
                 <div
                     class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
                     <img src="https://medias.lumni.fr/PMysfWyvKKZu_Aq-BebItz9ZW24/276x388/filters:focal(172x205:171x204):quality(80):max_bytes(120000)/65cdd8c2f42b8f4a530b254e"
@@ -316,7 +241,7 @@
                 </span>
             </div>
             <div
-                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container">
+                class="flex justify-center relative max-w-[19rem] p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container">
                 <div
                     class="w-full h-96 relative before:content-[''] before:top-[50%] before:absolute before:inset-0 before:bg-gradient-to-t before:from-black/70 before:rounded-b-[2.8rem]">
                     <img src="https://medias.lumni.fr/WTsZE0Eo-FzuF2EBgaDgs3aLQFg/276x388/filters:focal(448x629:447x628):quality(80):max_bytes(120000)/65ccba08b82ced7d240198cc"
@@ -353,7 +278,7 @@
 
         <div class="grid gap-4 md:grid-cols-4 md:gap-6 pr-4">
             <div
-                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container aspect-square group">
+                class="flex justify-center relative max-w-[19rem] p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container aspect-square group">
                 <div class="w-full relative flex items-center justify-center p-4">
                     <div
                         class="absolute rounded-[2.8rem] bg-gradient-to-r from-[#ffb800] via-[#ffb800] to-[#ffb800] inset-0 -z-10">
@@ -361,7 +286,7 @@
                     <img src="https://medias.lumni.fr/fUVneTllno4EZ4DQTzwaXzoNW3I/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/654d1ac68af4af70c00b5fa2"
                         class="absolute top-[50%] group-transform group-transition-transform group-duration-500 group-ease-in-out group-hover:scale-75 z-10">
                     <img src="https://medias.lumni.fr/LnXUIEsEImyTNA5AobF5-w56RvI/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/654d1ac55db710275e09e574"
-                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110" />
+                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-105" />
                 </div>
                 <button
                     class="flex flex-col justify-center items-center absolute -top-4.5 right-7 p-1 z-1 rounded-full border border-black shadow-custom bg-white">
@@ -372,7 +297,7 @@
                 </button>
             </div>
             <div
-                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container aspect-square group">
+                class="flex justify-center relative max-w-[19rem] p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container aspect-square group">
                 <div class="w-full relative flex items-center justify-center p-4 cursor-pointer">
                     <div
                         class="absolute rounded-[2.8rem] bg-gradient-to-r from-[#067355] via-[#067355] to-[#067355] inset-0 -z-10">
@@ -380,7 +305,7 @@
                     <img src="https://medias.lumni.fr/j34Cb0xROYWXXAb6XVUowUMaRl8/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/6530ee6705f2ef4a79079ae7"
                         class="absolute top-[50%] group-transform group-transition-transform group-duration-500 group-ease-in-out group-hover:scale-75 z-10">
                     <img src="https://medias.lumni.fr/W_Urjw5hgBy1lpnlwc19NtCdjGY/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/6530ee660eacc083af0f6d2e"
-                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110" />
+                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-105" />
                 </div>
                 <button
                     class="flex flex-col justify-center items-center absolute -top-4.5 right-7 p-1 z-1 rounded-full border border-black shadow-custom bg-white">
@@ -391,7 +316,7 @@
                 </button>
             </div>
             <div
-                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container aspect-square group">
+                class="flex justify-center relative max-w-[19rem] p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container aspect-square group">
                 <div class="w-full relative flex items-center justify-center p-4 cursor-pointer">
                     <div
                         class="absolute rounded-[2.8rem] bg-gradient-to-r from-[#3c288d] via-[#3c288d] to-[#3c288d] inset-0 -z-10">
@@ -399,7 +324,7 @@
                     <img src="https://medias.lumni.fr/pgjWY_D2XxuZ8qlZSfQJ7IHBM54/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/652faeca495fd87a640b0e10"
                         class="absolute top-[50%] group-transform group-transition-transform group-duration-500 group-ease-in-out group-hover:scale-75 z-10">
                     <img src="https://medias.lumni.fr/H9WYdF62qJ15ffAw8ca-sjDFT5g/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/652faec9b80d6624430abd5c"
-                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110" />
+                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-105" />
                 </div>
                 <button
                     class="flex flex-col justify-center items-center absolute -top-4.5 right-7 p-1 z-1 rounded-full border border-black shadow-custom bg-white">
@@ -410,7 +335,7 @@
                 </button>
             </div>
             <div
-                class="flex justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-110 shadow-container aspect-square group">
+                class="flex justify-center relative max-w-[19rem] p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container aspect-square group">
                 <div class="w-full relative flex items-center justify-center p-4 cursor-pointer">
                     <div
                         class="absolute rounded-[2.8rem] bg-gradient-to-r from-[#01a0e9] via-[#01a0e9] to-[#01a0e9] inset-0 -z-10">
@@ -418,7 +343,7 @@
                     <img src="https://medias.lumni.fr/f7OdeEACQskU6HDyu8s_cIwDcBE/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/6530ee1bd2d05e9e16016eae"
                         class="absolute top-[50%] group-transform group-transition-transform group-duration-500 group-ease-in-out group-hover:scale-75 z-10">
                     <img src="https://medias.lumni.fr/K2gvDkgOX1pkM1ms6oiIhEvn898/0x0/filters:focal(1x1:0x0):quality(100):max_bytes(120000)/6530ee1bddc10ba54c062139"
-                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-110" />
+                        class="rounded-[2.8rem] object-cover transform transition-transform duration-500 ease-in-out hover:scale-105" />
                 </div>
                 <button
                     class="flex flex-col justify-center items-center absolute -top-4.5 right-7 p-1 z-1 rounded-full border border-black shadow-custom bg-white">
@@ -498,6 +423,59 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $("#subject-slider").slick({
+                slidesToShow: 4,
+                slidesToScroll: 4,
+            });
+
+
+            $('#home-slider').slick({
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                prevArrow: "<button type='button' class='absolute z-20 top-[40%] shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z' /></svg></button>",
+                nextArrow: "<button type='button' class='absolute z-20 top-[40%] right-1 shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z' /></svg></button>",
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+
+        });
+    </script>
 </body>
 
 </html>
