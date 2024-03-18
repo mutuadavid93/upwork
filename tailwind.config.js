@@ -13,6 +13,7 @@ module.exports = {
         "text-title": "#232323",
         "hover-gray": "#EFEFEF",
         'deep-green': '#19834B',
+        "light-blue": '#45BCFF'
       },
     }
   },
