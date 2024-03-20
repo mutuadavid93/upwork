@@ -13,7 +13,9 @@ module.exports = {
         "text-title": "#232323",
         "hover-gray": "#EFEFEF",
         'deep-green': '#19834B',
-        "light-blue": '#45BCFF'
+        "light-blue": '#45BCFF',
+        "light-gray": '#F5F5F5',
+        "light-purple": "#fc18f6"
       },
     }
   },
