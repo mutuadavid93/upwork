@@ -16,13 +16,12 @@
         integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
+    <!-- <style>
         #subject-slider .slick-track,
         #home-slider .slick-track {
             padding-top: 1rem;
         }
 
-        /* #subject-slider .slick-list, */
         #home-slider .slick-list {
             height: 28rem !important;
             overflow: hidden;
@@ -35,7 +34,7 @@
         button[aria-disabled="true"] {
             display: none !important;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -100,7 +99,7 @@
             </div>
 
             <!-- flex items-center md:justify-center w-full md:pb-16 pb-[26rem] -->
-            <section id="subject-slider" class="text-white">
+            <section id="subject-slider" class="subject-slider text-white">
                 <div class="flex max-w-[15rem] justify-center relative md:p-1 md:px-16 rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 hover:cursor-pointer shadow-container 
                     hover:bg-[#2D3EBF] bg-[#3F52FF] border-b-[#2D3EBF]">
                     <div class="w-full h-24 flex flex-col text-center items-center justify-center gap-1">
@@ -177,7 +176,7 @@
 
 
         <!-- id="home-slider" class="grid gap-4 md:grid-cols-4 md:gap-6 pr-4"-->
-        <div id="home-slider" class="space-x-4 overflow-hidden relative">
+        <div id="home-slider" class="home-slider space-x-4 overflow-hidden relative">
             <div
                 class="flex max-w-[19rem] justify-center relative p-3 space-y-4 bg-white rounded-[3.5rem] transform transition-transform duration-500 ease-in-out hover:scale-105 shadow-container">
                 <div
@@ -439,7 +438,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="relative h-96 bg-white rounded-xl p-2.5">
                         <img src="https://medias.lumni.fr/UHfmlar8C7UTUPGd-97Tnw_boiw/276x189/filters:focal(296460x-92130:296459x0):quality(80):max_bytes(120000)/65ec7f106f7243c091098d56"
                             class="rounded-lg object-fill h-full w-full">
@@ -447,7 +446,7 @@
                             class="absolute top-0 left-0 bg-white p-2 px-3 text-xs font-medium rounded-tl-xl rounded-br-xl">
                             Quiz</div>
                     </div>
-    
+
                     <div class="mt-6 space-y-8">
                         <div class="flex items-center justify-between">
                             <h2 class="text-xl font-medium">My Fabulous Cat with Essie</h2>
@@ -459,9 +458,9 @@
                                 </svg>
                             </button>
                         </div>
-    
+
                         <p>5 questions | English | CE2</p>
-    
+
                         <div class="flex justify-center">
                             <button type="button" class="rounded-xl border border-black shadow-custom p-3 bg-white">I
                                 go</button>
@@ -471,9 +470,9 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-4">
-                <div class="border-2 border-dashed border-[#ff9281] rounded-3xl transform transition-transform duration-500 ease-in-out hover:scale-110 before:content-['nouveauté'] before:absolute before:-top-7 before:left-[40%] before:font-medium before:rounded-t-md before:bg-[#ff9281] before:p-1.5 before:text-sm">
-                    <div
-                        class="flex flex-col items-center relative p-3 space-y-4 bg-white rounded-3xl">
+                <div
+                    class="border-2 border-dashed border-[#ff9281] rounded-3xl transform transition-transform duration-500 ease-in-out hover:scale-110 before:content-['nouveauté'] before:absolute before:-top-7 before:left-[40%] before:font-medium before:rounded-t-md before:bg-[#ff9281] before:p-1.5 before:text-sm">
+                    <div class="flex flex-col items-center relative p-3 space-y-4 bg-white rounded-3xl">
                         <div class="w-full">
                             <div class="h-44 bg-cover bg-no-repeat bg-center rounded-t-2xl"
                                 style="background-image: url('https://medias.lumni.fr/uD8JYVlY_6jalAlw5AtVpSIc450/276x189/filters:focal(296460x-92130:296459x0):quality(80):max_bytes(120000)/650b230bde49b7d4090f09f5');">
@@ -570,9 +569,9 @@
                             style="border-radius: 0 0.75rem 0 0.75rem;">10%</span>
                     </div>
                 </div>
-                <div class="border-2 border-dashed border-[#ff9281] rounded-3xl transform transition-transform duration-500 ease-in-out hover:scale-110 before:content-['nouveauté'] before:absolute before:-top-7 before:left-[40%] before:font-medium before:rounded-t-md before:bg-[#ff9281] before:p-1.5 before:text-sm">
-                    <div
-                        class="flex flex-col items-center relative p-3 space-y-4 bg-white rounded-3xl">
+                <div
+                    class="border-2 border-dashed border-[#ff9281] rounded-3xl transform transition-transform duration-500 ease-in-out hover:scale-110 before:content-['nouveauté'] before:absolute before:-top-7 before:left-[40%] before:font-medium before:rounded-t-md before:bg-[#ff9281] before:p-1.5 before:text-sm">
+                    <div class="flex flex-col items-center relative p-3 space-y-4 bg-white rounded-3xl">
                         <div class="w-full">
                             <div class="h-44 bg-cover bg-no-repeat bg-center rounded-t-2xl grayscale"
                                 style="background-image: url(images/quiz.png);">
@@ -683,20 +682,60 @@
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        $(document).ready(function () {
+        // $(document).ready(function () {
 
-            var getArrows = function ($top, $count = 4) {
-                return {
-                    prevArrow: "<button type='button' class='absolute z-20 top-[" + $top + "%] shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z' /></svg></button>",
-                    nextArrow: "<button type='button' class='absolute z-20 top-[" + $top + "%] right-1 shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z' /></svg></button>",
-                    slidesToShow: $count,
-                    slidesToScroll: $count,
-                }
-            }
+        //     var getArrows = function ($top, $count = 4) {
+        //         return {
+        //             prevArrow: "<button type='button' class='absolute z-20 top-[" + $top + "%] shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z' /></svg></button>",
+        //             nextArrow: "<button type='button' class='absolute z-20 top-[" + $top + "%] right-1 shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z' /></svg></button>",
+        //             slidesToShow: $count,
+        //             slidesToScroll: $count,
+        //         }
+        //     }
 
+        //     var cardSliderOptions = {
+        //         infinite: false,
+        //         speed: 300,
+        //         responsive: [
+        //             {
+        //                 breakpoint: 1024,
+        //                 settings: {
+        //                     slidesToShow: 3,
+        //                     slidesToScroll: 3,
+        //                     infinite: true,
+        //                     dots: true
+        //                 }
+        //             },
+        //             {
+        //                 breakpoint: 600,
+        //                 settings: {
+        //                     slidesToShow: 2,
+        //                     slidesToScroll: 2
+        //                 }
+        //             },
+        //             {
+        //                 breakpoint: 480,
+        //                 settings: {
+        //                     slidesToShow: 1,
+        //                     slidesToScroll: 1
+        //                 }
+        //             }
+        //         ]
+        //     };
+
+        //     var subjectSliderOptions = Object.assign(getArrows(40, 5), cardSliderOptions);
+        //     var homeSliderOptions = Object.assign(getArrows(40), cardSliderOptions);
+
+
+        //     $("#subject-slider").slick(subjectSliderOptions);
+        //     $('#home-slider').slick(homeSliderOptions);
+
+        // });
+    </script>
+
+    <script>
+        $(function () {
             var cardSliderOptions = {
-                infinite: false,
-                speed: 300,
                 responsive: [
                     {
                         breakpoint: 1024,
@@ -721,20 +760,28 @@
                             slidesToScroll: 1
                         }
                     }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
                 ]
             };
 
-            var subjectSliderOptions = Object.assign(getArrows(40, 5), cardSliderOptions);
-            var homeSliderOptions = Object.assign(getArrows(40), cardSliderOptions);
 
+            $('.home-slider').slick(Object.assign({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                prevArrow: "<button type='button' class='absolute z-20 top-[40%] shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z' /></svg></button>",
+                nextArrow: "<button type='button' class='absolute z-20 top-[40%] right-1 shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z' /></svg></button>",
+            }, cardSliderOptions));
 
-            $("#subject-slider").slick(subjectSliderOptions);
-            $('#home-slider').slick(homeSliderOptions);
-
-        });
+            $('.subject-slider').slick(Object.assign({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                prevArrow: "<button type='button' class='absolute z-20 top-[25%] shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z' /></svg></button>",
+                nextArrow: "<button type='button' class='absolute z-20 top-[25%] right-1 shadow-slider text-white cursor-pointer  bg-[#393939] border border-black border-b-2 border-b-black rounded-full active:translate-y-0.5 flex items-center justify-center p-2'><svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'><path fill='currentColor' d='M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z' /></svg></button>",
+            }, cardSliderOptions));
+        }); 
     </script>
 </body>
 
