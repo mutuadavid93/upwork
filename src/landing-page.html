@@ -1,16 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
         @import url('output.css');
     </style>
 </head>
+
 <body>
-    <section class="container">
-        
+    <section id="hero-banner"
+        class="relative w-full max-w-full bg-white bg-scroll bg-no-repeat bg-center bg-cover  flex justify-center text-center"
+        style="min-height: 100svh;background-image: url(images/reverie-hero-banner.png)">
+        <div class="absolute bg-black/10 inset-0 h-full w-full"></div>
+        <div class="absolute z-20 mt-1">
+            <img src="images/reverie-logo.png" alt="">
+        </div>
+
+        <div class="absolute bottom-6 text-white z-20 space-y-2.5">
+            <h1 class="font-extrabold text-5xl font-lime-light">Reimagine Active Adult Living</h1>
+            <div class="text-3xl font-light">IN FLORIDA&apos;S PREMIER 55+ COMMUNITY</div>
+            <button
+                class="uppercase py-2 px-6 border border-white hover:ring-2 hover:ring-white text-sm font-medium">register
+                now</button>
+        </div>
+
+        <!-- can I have below element as a grandient background which fades from bg-black/30 to bg-black/20 -->
+        <div class="absolute w-full h-1/3 bottom-0 bg-gradient-to-t from-black/60"></div>
+    </section>
+
+    <section id="gated-community" class="bg-white min-h-[200px] w-full pl-24 py-11 bg-cover bg-no-repeat bg-center"
+        style="background-image: url(images/reverie/images/background-1.png);">
+        <div class="grid grid-cols-12 gap-8">
+            <div class="col-span-5 pt-4 space-y-2">
+                <h2 class="font-light text-2xl text-[#939b56]">PORT ST. LUCIE</h2>
+                <div class="text-2xl font-light text-gray-800 font-lime-light py-4">
+                    New Gated Community On The
+                    <span class="block">Treasure Coast By Dream Finders</span> Homes &hyphen; Active Adult Lifestyle
+                </div>
+                <p class="text-[#5a5957]">
+                    The word “Reverie” means “daydream” and reflects the
+                    idyllic lifestyle that active adults have long hoped for.
+                    Reverie at Port St. Lucie will bring together all the best
+                    thinking about today&apos;s most celebrated 55+ communities
+                    and raise it to a to an exciting new level.
+                </p>
+
+                <ul class="list-disc text-[#5a5957] pl-4 py-4">
+                    <li>
+                        <span class="block">Convenient location close to great golf,</span>
+                        beaches, dining and more
+                    </li>
+                    <li>Abundant amenities and social activities</li>
+                    <li><span class="block">New single-family homes by one of the</span>
+                        nation&apos;s fastest-growing
+                        builders
+                    </li>
+                    <li><span class="block">Low-maintenance living leaves you with</span>
+                        plenty of time to enjoy it all
+                    </li>
+                </ul>
+
+                <button class="uppercase py-2 px-8 w-3/4 border bg-[#b8c26b] text-white text-sm font-medium">
+                    REQUEST MORE INFORMATION
+                </button>
+            </div>
+
+            <div class="col-span-7 relative">
+                <div class="absolute bottom-0 left-0 p-2 uppercase text-white bg-[#b8c26b]">
+                    stock
+                </div>
+                <img src="images/reverie/images/happy-people.png" class="object-fill w-full h-full">
+            </div>
+        </div>
+    </section>
+
+    <section id="quality-and-trust py-11 bg-[#b8c26b]">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae velit accusamus sint cum ipsum nam saepe in
+        necessitatibus magnam reiciendis similique officia ab, veritatis dicta delectus quia voluptates beatae.
+        Expedita!
     </section>
 </body>
+
 </html>

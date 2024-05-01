@@ -22,6 +22,9 @@ module.exports = {
 
         "secondary": "#88ace8"
       },
+      fontFamily: {
+        "lime-light" : ["Limelight", "sans-serif"]
+      }
     }
   },
   plugins: []
